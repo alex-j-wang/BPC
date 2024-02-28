@@ -47,3 +47,10 @@
 2024-02-27 19:55:10,864 - Operation succeeded (16.045 ms)
 2024-02-27 19:56:20,153 - Succeeded for "ABCDEFGHIJKLM" and "NOPQRSTUVWXYZ" in 1 attempt(s)
 2024-02-27 19:56:20,153 - Operation succeeded (27.324 ms)
+2024-02-28 01:00:16,579 - Succeeded for "TEST" and "TEST" in 2 attempt(s)
+2024-02-28 01:00:16,580 - Operation succeeded (7.448 ms)
+2024-02-28 01:02:00,971 - Reached limit of 20 attempt(s)
+2024-02-28 01:02:00,972 - Could not succeed without stacking for "A" and "B"
+2024-02-28 01:02:00,972 - Operation failed (7.731 ms)
+2024-02-28 01:02:15,718 - Succeeded for "FOO" and "BAR" in 2 attempt(s)
+2024-02-28 01:02:15,719 - Operation succeeded (4.77 ms)

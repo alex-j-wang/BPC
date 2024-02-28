@@ -5,34 +5,31 @@ import time
 import json
 import sys
 
-ATTEMPT_LIMIT : int = 20
-with open('pixel_font/dim.json', 'r') as f:
-    data = json.load(f)
-    CHAR_WIDTH : int = data['width']
-    CHAR_HEIGHT : int = data['height']
-
-b_ratio : float = (CHAR_WIDTH + 1) / CHAR_WIDTH # Buffer size ratio
-char_grids : dict[str, np.ndarray] = {}
 logging.basicConfig(filename='status.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+ATTEMPT_LIMIT : int = 20
+
+# Load dimensions
+with open('pixel_font/dim.json', 'r') as f:
+    dims = json.load(f)
+    CHAR_WIDTH : int = dims['width']
+    CHAR_HEIGHT : int = dims['height']
+    B_RATIO : float = (CHAR_WIDTH + 1) / CHAR_WIDTH # Buffer size ratio
+
+# Load pixel font
+with open('pixel_font/map.json', 'r') as f:
+    char_grids = {}
+    for char, grid in json.load(f).items():
+        char_grids[char] = np.array([[c == '█' for c in line] for line in grid.split('\n')], dtype=bool)
 
 class AttemptLimitReached(Exception):
     '''Raised when attempt limit is reached'''
     pass
 
-def parse_char_file(char : str) -> np.ndarray:
-    '''Reads the .txt file for an input character and converts it to an array'''
-    with open(f'pixel_font/{char}.txt', 'r') as f:
-        char_grid = np.array([[c == '█' for c in line] for line in f.read().split('\n')], dtype=bool)
-    return char_grid
-
 def word_to_grid(word : str) -> np.ndarray:
     '''Converts a word to its pixel array'''
     word_grid = np.zeros((CHAR_HEIGHT, CHAR_WIDTH * len(word)), dtype=bool)
     for i, char in enumerate(word):
-        if char in char_grids:
-            word_grid[:, i * CHAR_WIDTH: (i + 1) * CHAR_WIDTH] = char_grids[char]
-        else:
-            word_grid[:, i * CHAR_WIDTH: (i + 1) * CHAR_WIDTH] = parse_char_file(char)
+        word_grid[:, i * CHAR_WIDTH: (i + 1) * CHAR_WIDTH] = char_grids[char]
     return word_grid
 
 def mesh_indices(horizontal_grid : np.ndarray, vertical_grid : np.ndarray, operator) -> np.ndarray:
@@ -46,7 +43,7 @@ def mesh_indices(horizontal_grid : np.ndarray, vertical_grid : np.ndarray, opera
 
 def buffer_indices(dim : int) -> np.ndarray:
     '''Returns a buffered array of indices of length dim'''
-    return (np.arange(dim) * b_ratio).astype(int)
+    return (np.arange(dim) * B_RATIO).astype(int)
 
 def generate_grids(horizontal_word : str, vertical_word : str) -> np.ndarray:
     '''Returns a grid representing two uppercase input words'''
@@ -101,8 +98,8 @@ def generate_grids(horizontal_word : str, vertical_word : str) -> np.ndarray:
     voxel_display : np.ndarray = np.where(stack_counts, CHAR_HEIGHT - np.argmax(voxels, axis=0), 0)
 
     rows, cols = stack_counts.shape
-    b_rows = int(rows * b_ratio) - 1
-    b_cols = int(cols * b_ratio) - 1
+    b_rows = int(rows * B_RATIO) - 1
+    b_cols = int(cols * B_RATIO) - 1
     
     final_grid : np.ndarray = np.zeros((b_rows, b_cols), dtype=int)
     buffered_indices : np.ndarray = np.meshgrid(buffer_indices(rows), buffer_indices(cols))
