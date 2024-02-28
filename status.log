@@ -43,3 +43,7 @@
 2024-02-27 18:44:07,559 - Operation failed (6.172 ms)
 2024-02-27 19:11:40,325 - Succeeded for "TEST" and "TEST" in 2 attempt(s)
 2024-02-27 19:11:40,326 - Operation succeeded (5.898 ms)
+2024-02-27 19:55:10,863 - Succeeded for "FOO" and "BAR" in 5 attempt(s)
+2024-02-27 19:55:10,864 - Operation succeeded (16.045 ms)
+2024-02-27 19:56:20,153 - Succeeded for "ABCDEFGHIJKLM" and "NOPQRSTUVWXYZ" in 1 attempt(s)
+2024-02-27 19:56:20,153 - Operation succeeded (27.324 ms)

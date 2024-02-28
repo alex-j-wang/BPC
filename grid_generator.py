@@ -2,11 +2,14 @@ import pandas as pd
 import numpy as np
 import logging
 import time
+import json
 import sys
 
 ATTEMPT_LIMIT : int = 20
-CHAR_WIDTH : int = 3
-CHAR_HEIGHT : int = 5
+with open('pixel_font/dim.json', 'r') as f:
+    data = json.load(f)
+    CHAR_WIDTH : int = data['width']
+    CHAR_HEIGHT : int = data['height']
 
 b_ratio : float = (CHAR_WIDTH + 1) / CHAR_WIDTH # Buffer size ratio
 char_grids : dict[str, np.ndarray] = {}
