@@ -54,3 +54,18 @@
 2024-02-28 01:02:00,972 - Operation failed (7.731 ms)
 2024-02-28 01:02:15,718 - Succeeded for "FOO" and "BAR" in 2 attempt(s)
 2024-02-28 01:02:15,719 - Operation succeeded (4.77 ms)
+2024-02-28 01:03:25,058 - Succeeded for "FOO" and "BAR" in 2 attempt(s)
+2024-02-28 01:03:25,058 - Operation succeeded (4.734 ms)
+2024-02-28 01:13:29,734 - Succeeded for "B" and "B" in 5 attempt(s)
+2024-02-28 01:13:29,734 - Operation succeeded (3.21 ms)
+2024-02-28 01:14:09,000 - Reached limit of 20 attempt(s)
+2024-02-28 01:14:09,000 - Could not succeed without stacking for "L" and "L"
+2024-02-28 01:14:09,000 - Operation failed (4.043 ms)
+2024-02-28 01:34:41,793 - Reached limit of 20 attempt(s)
+2024-02-28 01:34:41,794 - Could not succeed without stacking for "B" and "B"
+2024-02-28 01:34:41,794 - Operation failed (5.157 ms)
+2024-02-28 01:34:43,932 - Reached limit of 20 attempt(s)
+2024-02-28 01:34:43,932 - Could not succeed without stacking for "B" and "B"
+2024-02-28 01:34:43,932 - Operation failed (4.385 ms)
+2024-02-28 01:34:49,299 - Succeeded for "ABC" and "DEF" in 2 attempt(s)
+2024-02-28 01:34:49,299 - Operation succeeded (1.904 ms)
