@@ -5,8 +5,7 @@ import time
 import json
 import sys
 
-logging.basicConfig(filename='status.log', level=logging.INFO, format='%(asctime)s - %(message)s')
-ATTEMPT_LIMIT : int = 20
+ATTEMPT_LIMIT : int = 50
 
 # Load dimensions
 with open('pixel_font/dim.json', 'r') as f:
@@ -45,8 +44,8 @@ def buffer_indices(dim : int) -> np.ndarray:
     '''Returns a buffered array of indices of length dim'''
     return (np.arange(dim) * B_RATIO).astype(int)
 
-def generate_grids(horizontal_word : str, vertical_word : str) -> np.ndarray:
-    '''Returns a grid representing two uppercase input words'''
+def generate_grids(horizontal_word : str, vertical_word : str) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    '''Returns a grid representing two uppercase input words and their respective grids.'''
     horizontal_grid : np.ndarray = word_to_grid(horizontal_word)
     vertical_grid : np.ndarray = word_to_grid(vertical_word)
     attempts : int = 0
@@ -91,8 +90,8 @@ def generate_grids(horizontal_word : str, vertical_word : str) -> np.ndarray:
             break
 
     if stack_counts.max() > 1:
-        logging.error(f'Reached limit of {attempts} attempt(s)')
-        logging.error(f'Could not succeed without stacking for "{horizontal_word}" and "{vertical_word}"')
+        logging.warning(f'Reached limit of {attempts} attempt(s)')
+        logging.warning(f'Could not succeed without stacking for "{horizontal_word}" and "{vertical_word}"')
         raise AttemptLimitReached
 
     voxel_display : np.ndarray = np.where(stack_counts, CHAR_HEIGHT - np.argmax(voxels, axis=0), 0)
@@ -116,6 +115,8 @@ def generate_grids(horizontal_word : str, vertical_word : str) -> np.ndarray:
 
 def main():
     '''Main function for grid generation. Generates a grid for two words and saves the results to files.'''
+    logging.basicConfig(filename='status.log', level=logging.INFO,
+                        format='[%(asctime)s] %(filename)s > %(levelname)s : %(message)s')
     # Load words
     if len(sys.argv) != 3:
         exit('Usage: python grid_generator.py <word1> <word2>')

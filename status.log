@@ -1,71 +1,8 @@
-2024-02-27 18:39:39,250 - Succeeded for "qwerty" and "asdfgh" in 1 attempt(s)
-2024-02-27 18:39:39,251 - Operation succeeded (4.434 ms)
-2024-02-27 18:39:43,502 - Succeeded for "qwerty" and "asdfgh" in 1 attempt(s)
-2024-02-27 18:39:43,503 - Operation succeeded (3.301 ms)
-2024-02-27 18:39:45,314 - Succeeded for "qwerty" and "asdfgh" in 1 attempt(s)
-2024-02-27 18:39:45,316 - Operation succeeded (4.638 ms)
-2024-02-27 18:39:46,521 - Succeeded for "qwerty" and "asdfgh" in 1 attempt(s)
-2024-02-27 18:39:46,521 - Operation succeeded (19.373 ms)
-2024-02-27 18:39:47,335 - Succeeded for "qwerty" and "asdfgh" in 1 attempt(s)
-2024-02-27 18:39:47,335 - Operation succeeded (7.289 ms)
-2024-02-27 18:39:49,728 - Succeeded for "qwerty" and "asdfgh" in 1 attempt(s)
-2024-02-27 18:39:49,728 - Operation succeeded (3.33 ms)
-2024-02-27 18:39:53,181 - Reached limit of 20 attempt(s)
-2024-02-27 18:39:53,182 - Could not succeed without stacking for "a" and "b"
-2024-02-27 18:39:53,182 - Operation failed (5.172 ms)
-2024-02-27 18:40:09,909 - Reached limit of 20 attempt(s)
-2024-02-27 18:40:09,910 - Could not succeed without stacking for "a" and "b"
-2024-02-27 18:40:09,910 - Operation failed (5.216 ms)
-2024-02-27 18:40:11,573 - Reached limit of 20 attempt(s)
-2024-02-27 18:40:11,573 - Could not succeed without stacking for "a" and "b"
-2024-02-27 18:40:11,573 - Operation failed (4.188 ms)
-2024-02-27 18:40:14,811 - Reached limit of 20 attempt(s)
-2024-02-27 18:40:14,811 - Could not succeed without stacking for "a" and "b"
-2024-02-27 18:40:14,811 - Operation failed (4.43 ms)
-2024-02-27 18:40:30,092 - Succeeded for "asdfghjklkjhgfdsa" and "asdfghjklkjhgfdsa" in 1 attempt(s)
-2024-02-27 18:40:30,093 - Operation succeeded (22.145 ms)
-2024-02-27 18:40:39,307 - Succeeded for "foo" and "bar" in 3 attempt(s)
-2024-02-27 18:40:39,307 - Operation succeeded (4.453 ms)
-2024-02-27 18:42:17,743 - Succeeded for "FOO" and "BAR" in 2 attempt(s)
-2024-02-27 18:42:17,743 - Operation succeeded (7.769 ms)
-2024-02-27 18:42:25,325 - Succeeded for "foo" and "bar" in 2 attempt(s)
-2024-02-27 18:42:25,325 - Operation succeeded (3.81 ms)
-2024-02-27 18:43:34,130 - Succeeded for "FOO" and "BAR" in 2 attempt(s)
-2024-02-27 18:43:34,130 - Operation succeeded (4.721 ms)
-2024-02-27 18:43:47,268 - Reached limit of 20 attempt(s)
-2024-02-27 18:43:47,268 - Could not succeed without stacking for "A" and "B"
-2024-02-27 18:43:47,268 - Operation failed (5.489 ms)
-2024-02-27 18:44:01,414 - Reached limit of 20 attempt(s)
-2024-02-27 18:44:01,414 - Could not succeed without stacking for "X" and "X"
-2024-02-27 18:44:01,414 - Operation failed (4.795 ms)
-2024-02-27 18:44:07,558 - Reached limit of 20 attempt(s)
-2024-02-27 18:44:07,559 - Could not succeed without stacking for "W" and "W"
-2024-02-27 18:44:07,559 - Operation failed (6.172 ms)
-2024-02-27 19:11:40,325 - Succeeded for "TEST" and "TEST" in 2 attempt(s)
-2024-02-27 19:11:40,326 - Operation succeeded (5.898 ms)
-2024-02-27 19:55:10,863 - Succeeded for "FOO" and "BAR" in 5 attempt(s)
-2024-02-27 19:55:10,864 - Operation succeeded (16.045 ms)
-2024-02-27 19:56:20,153 - Succeeded for "ABCDEFGHIJKLM" and "NOPQRSTUVWXYZ" in 1 attempt(s)
-2024-02-27 19:56:20,153 - Operation succeeded (27.324 ms)
-2024-02-28 01:00:16,579 - Succeeded for "TEST" and "TEST" in 2 attempt(s)
-2024-02-28 01:00:16,580 - Operation succeeded (7.448 ms)
-2024-02-28 01:02:00,971 - Reached limit of 20 attempt(s)
-2024-02-28 01:02:00,972 - Could not succeed without stacking for "A" and "B"
-2024-02-28 01:02:00,972 - Operation failed (7.731 ms)
-2024-02-28 01:02:15,718 - Succeeded for "FOO" and "BAR" in 2 attempt(s)
-2024-02-28 01:02:15,719 - Operation succeeded (4.77 ms)
-2024-02-28 01:03:25,058 - Succeeded for "FOO" and "BAR" in 2 attempt(s)
-2024-02-28 01:03:25,058 - Operation succeeded (4.734 ms)
-2024-02-28 01:13:29,734 - Succeeded for "B" and "B" in 5 attempt(s)
-2024-02-28 01:13:29,734 - Operation succeeded (3.21 ms)
-2024-02-28 01:14:09,000 - Reached limit of 20 attempt(s)
-2024-02-28 01:14:09,000 - Could not succeed without stacking for "L" and "L"
-2024-02-28 01:14:09,000 - Operation failed (4.043 ms)
-2024-02-28 01:34:41,793 - Reached limit of 20 attempt(s)
-2024-02-28 01:34:41,794 - Could not succeed without stacking for "B" and "B"
-2024-02-28 01:34:41,794 - Operation failed (5.157 ms)
-2024-02-28 01:34:43,932 - Reached limit of 20 attempt(s)
-2024-02-28 01:34:43,932 - Could not succeed without stacking for "B" and "B"
-2024-02-28 01:34:43,932 - Operation failed (4.385 ms)
-2024-02-28 01:34:49,299 - Succeeded for "ABC" and "DEF" in 2 attempt(s)
-2024-02-28 01:34:49,299 - Operation succeeded (1.904 ms)
+[2024-03-05 22:49:45,587] monitor.py > INFO : Detected update to "ugh" for Interactive
+[2024-03-05 22:49:45,588] monitor.py > WARNING : Input shorter than two words
+[2024-03-05 22:50:00,335] monitor.py > INFO : Detected update to "test" for Interactive
+[2024-03-05 22:50:00,335] monitor.py > WARNING : Input shorter than two words
+[2024-03-05 22:50:42,487] monitor.py > INFO : Detected update to "fine" for Interactive
+[2024-03-05 22:50:42,488] monitor.py > WARNING : Input shorter than two words
+[2024-03-05 22:51:20,056] monitor.py > INFO : Detected update to "test" for Interactive
+[2024-03-05 22:51:20,058] monitor.py > WARNING : Input shorter than two words
