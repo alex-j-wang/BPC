@@ -1,8 +1,103 @@
-[2024-03-05 22:49:45,587] monitor.py > INFO : Detected update to "ugh" for Interactive
-[2024-03-05 22:49:45,588] monitor.py > WARNING : Input shorter than two words
-[2024-03-05 22:50:00,335] monitor.py > INFO : Detected update to "test" for Interactive
-[2024-03-05 22:50:00,335] monitor.py > WARNING : Input shorter than two words
-[2024-03-05 22:50:42,487] monitor.py > INFO : Detected update to "fine" for Interactive
-[2024-03-05 22:50:42,488] monitor.py > WARNING : Input shorter than two words
-[2024-03-05 22:51:20,056] monitor.py > INFO : Detected update to "test" for Interactive
-[2024-03-05 22:51:20,058] monitor.py > WARNING : Input shorter than two words
+[2024-03-06 03:30:30,923] monitor.py > INFO : Detected update to "maxlengthwhat isit" for Interactive
+[2024-03-06 03:30:30,944] grid_generator.py > INFO : Succeeded for "MAXLENGTHWHAT" and "ISIT" in 1 attempt(s)
+[2024-03-06 03:30:30,944] monitor.py > INFO : Operation succeeded (20.722 ms)
+[2024-03-06 03:30:34,855] monitor.py > INFO : Detected update to "maxlengthwhat is" for Interactive
+[2024-03-06 03:30:34,875] grid_generator.py > INFO : Succeeded for "MAXLENGTHWHAT" and "IS" in 3 attempt(s)
+[2024-03-06 03:30:34,875] monitor.py > INFO : Operation succeeded (19.055 ms)
+[2024-03-06 03:30:38,913] monitor.py > INFO : Detected update to "maxlengthwhat isit" for Interactive
+[2024-03-06 03:30:38,929] grid_generator.py > INFO : Succeeded for "MAXLENGTHWHAT" and "ISIT" in 1 attempt(s)
+[2024-03-06 03:30:38,929] monitor.py > INFO : Operation succeeded (15.131 ms)
+[2024-03-06 03:30:41,697] monitor.py > INFO : Detected update to "maxlengthwhat is" for Interactive
+[2024-03-06 03:30:41,856] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:30:41,856] grid_generator.py > WARNING : Could not succeed without stacking for "MAXLENGTHWHAT" and "IS"
+[2024-03-06 03:30:41,856] monitor.py > INFO : Operation failed (157.89 ms)
+[2024-03-06 03:30:45,763] monitor.py > INFO : Detected update to "maxlengthwhat isit" for Interactive
+[2024-03-06 03:30:45,791] grid_generator.py > INFO : Succeeded for "MAXLENGTHWHAT" and "ISIT" in 2 attempt(s)
+[2024-03-06 03:30:45,791] monitor.py > INFO : Operation succeeded (28.379 ms)
+[2024-03-06 03:30:48,524] monitor.py > INFO : Detected update to "maxlengthwhat is" for Interactive
+[2024-03-06 03:30:48,686] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:30:48,686] grid_generator.py > WARNING : Could not succeed without stacking for "MAXLENGTHWHAT" and "IS"
+[2024-03-06 03:30:48,686] monitor.py > INFO : Operation failed (161.973 ms)
+[2024-03-06 03:30:52,586] monitor.py > INFO : Detected update to "maxlengthwhat isit" for Interactive
+[2024-03-06 03:30:52,629] grid_generator.py > INFO : Succeeded for "MAXLENGTHWHAT" and "ISIT" in 5 attempt(s)
+[2024-03-06 03:30:52,629] monitor.py > INFO : Operation succeeded (41.812 ms)
+[2024-03-06 03:30:54,235] monitor.py > INFO : Detected update to "maxlengthwhat is" for Interactive
+[2024-03-06 03:30:54,315] grid_generator.py > INFO : Succeeded for "MAXLENGTHWHAT" and "IS" in 30 attempt(s)
+[2024-03-06 03:30:54,315] monitor.py > INFO : Operation succeeded (79.568 ms)
+[2024-03-06 03:31:46,861] monitor.py > INFO : Detected update to "long is" for Interactive
+[2024-03-06 03:31:46,890] grid_generator.py > INFO : Succeeded for "LONG" and "IS" in 12 attempt(s)
+[2024-03-06 03:31:46,890] monitor.py > INFO : Operation succeeded (28.421 ms)
+[2024-03-06 03:34:02,152] monitor.py > INFO : Detected update to "MAXLENGTHWHAT" for Interactive
+[2024-03-06 03:34:02,152] monitor.py > WARNING : Input shorter than two words
+[2024-03-06 03:34:06,655] monitor.py > INFO : Detected update to "long is" for Interactive
+[2024-03-06 03:34:06,677] grid_generator.py > INFO : Succeeded for "LONG" and "IS" in 9 attempt(s)
+[2024-03-06 03:34:06,677] monitor.py > INFO : Operation succeeded (21.685 ms)
+[2024-03-06 03:34:08,371] monitor.py > INFO : Detected update to "MAXLENGTHWHAT" for Interactive
+[2024-03-06 03:34:08,371] monitor.py > WARNING : Input shorter than two words
+[2024-03-06 03:34:10,008] monitor.py > INFO : Detected update to " is" for Interactive
+[2024-03-06 03:34:10,008] monitor.py > WARNING : Input shorter than two words
+[2024-03-06 03:34:15,037] monitor.py > INFO : Detected update to "MAXLENGTHWHAT" for Interactive
+[2024-03-06 03:34:15,037] monitor.py > WARNING : Input shorter than two words
+[2024-03-06 03:34:20,097] monitor.py > INFO : Detected update to "MAXLENGTHWHAT MAXLENGTHWHAT" for Interactive
+[2024-03-06 03:34:20,147] grid_generator.py > INFO : Succeeded for "MAXLENGTHWHAT" and "MAXLENGTHWHAT" in 1 attempt(s)
+[2024-03-06 03:34:20,147] monitor.py > INFO : Operation succeeded (49.626 ms)
+[2024-03-06 03:34:36,968] monitor.py > INFO : Detected update to "longinput s" for Interactive
+[2024-03-06 03:34:37,044] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:34:37,044] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "S"
+[2024-03-06 03:34:37,044] monitor.py > INFO : Operation failed (75.285 ms)
+[2024-03-06 03:34:46,866] monitor.py > INFO : Detected update to "longinput g" for Interactive
+[2024-03-06 03:34:46,951] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:34:46,951] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "G"
+[2024-03-06 03:34:46,951] monitor.py > INFO : Operation failed (84.1 ms)
+[2024-03-06 03:34:49,628] monitor.py > INFO : Detected update to "longinput gg" for Interactive
+[2024-03-06 03:34:49,762] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:34:49,762] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "GG"
+[2024-03-06 03:34:49,762] monitor.py > INFO : Operation failed (134.224 ms)
+[2024-03-06 03:34:53,831] monitor.py > INFO : Detected update to "longinput ga" for Interactive
+[2024-03-06 03:34:53,996] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:34:53,996] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "GA"
+[2024-03-06 03:34:53,996] monitor.py > INFO : Operation failed (164.775 ms)
+[2024-03-06 03:35:00,620] monitor.py > INFO : Detected update to "longinput oi" for Interactive
+[2024-03-06 03:35:00,780] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:35:00,780] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "OI"
+[2024-03-06 03:35:00,780] monitor.py > INFO : Operation failed (159.515 ms)
+[2024-03-06 03:35:04,764] monitor.py > INFO : Detected update to "longinput io" for Interactive
+[2024-03-06 03:35:04,926] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:35:04,926] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "IO"
+[2024-03-06 03:35:04,926] monitor.py > INFO : Operation failed (161.766 ms)
+[2024-03-06 03:35:10,020] monitor.py > INFO : Detected update to "longinput oi" for Interactive
+[2024-03-06 03:35:10,183] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:35:10,183] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "OI"
+[2024-03-06 03:35:10,183] monitor.py > INFO : Operation failed (162.358 ms)
+[2024-03-06 03:35:12,861] monitor.py > INFO : Detected update to "longinput io" for Interactive
+[2024-03-06 03:35:13,023] grid_generator.py > WARNING : Reached limit of 100 attempt(s)
+[2024-03-06 03:35:13,024] grid_generator.py > WARNING : Could not succeed without stacking for "LONGINPUT" and "IO"
+[2024-03-06 03:35:13,024] monitor.py > INFO : Operation failed (161.856 ms)
+[2024-03-06 03:35:50,721] monitor.py > INFO : Detected update to "longinput iot" for Interactive
+[2024-03-06 03:35:50,737] grid_generator.py > INFO : Succeeded for "LONGINPUT" and "IOT" in 1 attempt(s)
+[2024-03-06 03:35:50,737] monitor.py > INFO : Operation succeeded (15.44 ms)
+[2024-03-06 03:36:18,946] monitor.py > INFO : Detected update to "asdfh askdjf" for Interactive
+[2024-03-06 03:36:18,963] grid_generator.py > INFO : Succeeded for "ASDFH" and "ASKDJF" in 1 attempt(s)
+[2024-03-06 03:36:18,963] monitor.py > INFO : Operation succeeded (16.347 ms)
+[2024-03-06 03:36:25,207] monitor.py > INFO : Detected update to "asd asd" for Interactive
+[2024-03-06 03:36:25,214] grid_generator.py > INFO : Succeeded for "ASD" and "ASD" in 1 attempt(s)
+[2024-03-06 03:36:25,214] monitor.py > INFO : Operation succeeded (6.911 ms)
+[2024-03-06 03:36:29,077] monitor.py > INFO : Detected update to "fweoij wjfoie" for Interactive
+[2024-03-06 03:36:29,095] grid_generator.py > INFO : Succeeded for "FWEOIJ" and "WJFOIE" in 1 attempt(s)
+[2024-03-06 03:36:29,095] monitor.py > INFO : Operation succeeded (17.275 ms)
+[2024-03-06 03:36:31,810] monitor.py > INFO : Detected update to "acwnlfe acwnefo" for Interactive
+[2024-03-06 03:36:31,833] grid_generator.py > INFO : Succeeded for "ACWNLFE" and "ACWNEFO" in 1 attempt(s)
+[2024-03-06 03:36:31,833] monitor.py > INFO : Operation succeeded (23.376 ms)
+[2024-03-06 03:36:34,548] monitor.py > INFO : Detected update to "asd awe;ofij" for Interactive
+[2024-03-06 03:36:34,549] monitor.py > WARNING : Input contains non-alphabetic characters
+[2024-03-06 03:36:38,473] monitor.py > INFO : Detected update to "askjsa efhuie" for Interactive
+[2024-03-06 03:36:38,495] grid_generator.py > INFO : Succeeded for "ASKJSA" and "EFHUIE" in 1 attempt(s)
+[2024-03-06 03:36:38,495] monitor.py > INFO : Operation succeeded (20.908 ms)
+[2024-03-06 03:36:42,373] monitor.py > INFO : Detected update to "afsd ip" for Interactive
+[2024-03-06 03:36:42,384] grid_generator.py > INFO : Succeeded for "AFSD" and "IP" in 2 attempt(s)
+[2024-03-06 03:36:42,384] monitor.py > INFO : Operation succeeded (10.093 ms)
+[2024-03-06 03:36:45,101] monitor.py > INFO : Detected update to "afds uiop" for Interactive
+[2024-03-06 03:36:45,111] grid_generator.py > INFO : Succeeded for "AFDS" and "UIOP" in 1 attempt(s)
+[2024-03-06 03:36:45,111] monitor.py > INFO : Operation succeeded (8.88 ms)
+[2024-03-06 03:36:47,965] monitor.py > INFO : Detected update to "None" for Interactive
+[2024-03-06 03:36:47,966] monitor.py > WARNING : Input shorter than two words

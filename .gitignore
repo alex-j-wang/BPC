@@ -1,4 +1,6 @@
 MITMH
-grid_generator.ipynb
+__pycache__
+
+*.ipynb
 *.json
 .DS_Store

@@ -5,7 +5,7 @@ import time
 import json
 import sys
 
-ATTEMPT_LIMIT : int = 50
+ATTEMPT_LIMIT : int = 100
 
 # Load dimensions
 with open('pixel_font/dim.json', 'r') as f:

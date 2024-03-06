@@ -8,8 +8,8 @@ from google.oauth2 import service_account
 import numpy as np
 import grid_generator
 
-DIMENSIONS : tuple = (51, 51)
-OUTPUT_RANGE : str = 'A1:AZ51'
+DIMENSIONS : tuple = (53, 53)
+OUTPUT_RANGE : str = 'A1:BA53'
 
 logging.basicConfig(filename='status.log', level=logging.INFO,
                     format='[%(asctime)s] %(filename)s > %(levelname)s : %(message)s')
@@ -40,15 +40,19 @@ def calculate(input_string, output_sheet):
         return '???'
     if len(horizontal_word) > 13 or len(vertical_word) > 13:
         logging.warning('Input word(s) too long')
-        return "This ocean's only so big!"
+        return 'Too long!'
+    
+    t0 = time.perf_counter()
     try:
         grid, _, _ = grid_generator.generate_grids(horizontal_word, vertical_word)
+        logging.info(f'Operation succeeded ({round((time.perf_counter() - t0) * 1000, 3)} ms)')
     except grid_generator.AttemptLimitReached:
+        logging.info(f'Operation failed ({round((time.perf_counter() - t0) * 1000, 3)} ms)')
         return 'Too hard!'
     extended_grid = np.full(DIMENSIONS, -1)
-    extended_grid[:grid.shape[0], :grid.shape[1]] = grid
+    extended_grid[1:grid.shape[0] + 1, 1:grid.shape[1] + 1] = grid
     extended_grid = [[n if n >= 0 else '' for n in row] for row in extended_grid.tolist()]
-    output_sheet.update(OUTPUT_RANGE, extended_grid)
+    output_sheet.update(extended_grid, OUTPUT_RANGE)
     return 'Updated!'
 
 while True:
