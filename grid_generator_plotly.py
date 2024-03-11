@@ -121,4 +121,6 @@ layout = go.Layout(
 )
 
 fig = go.Figure(data=[scatter], layout=layout)
-fig.write_html('grid.html')
+with open('grid.html', 'a') as f:
+    f.truncate(0)
+    f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
