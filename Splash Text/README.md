@@ -1,7 +1,7 @@
 # Making it easier
 ### Modifications
 * Output words beside axes
-* 3D rendering
+* 3D rendering (restrict user rotation?)
 ### Hints
 * More emphasis on interactive sheet
 * Motivation to test short inputs
