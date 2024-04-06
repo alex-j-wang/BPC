@@ -2,6 +2,7 @@
 ### Modifications
 * Output words beside axes
 * 3D rendering (restrict user rotation?)
+* Flip through frames illustrating side saying "rotate"
 ### Hints
 * More emphasis on interactive sheet
 * Motivation to test short inputs
