@@ -40,6 +40,8 @@ def draw_board():
         pygame.draw.rect(screen, (0, 255, 0), checkpointrect)
     for enemy in game.enemies:
         pygame.draw.circle(screen, (0, 0, 255), enemy.pos, ENEMYSIZE * game.ratio)
+    for coin in game.coins:
+        pygame.draw.circle(screen, (255, 215, 0), coin, COINSIZE * game.ratio)
     pygame.draw.rect(screen, (255, 0, 0), game.player.rect)
 
 def end_game():
@@ -64,7 +66,7 @@ while running:
     keys = pygame.key.get_pressed()
     game.player_tick(keys[pygame.K_DOWN] - keys[pygame.K_UP], keys[pygame.K_RIGHT] - keys[pygame.K_LEFT])
 
-    if all(game.reached):
+    if all(game.reached) and not game.savedcoins:
         fade_out(fade_surface, 500)
         game.level += 1
         if not os.path.exists(f'levels/L{game.level}.txt'):
@@ -77,6 +79,9 @@ while running:
 
     # Move the enemies
     game.enemy_tick()
+
+    # Remove coins
+    game.coin_tick()
 
     # Draw the board
     draw_board()

@@ -9,8 +9,10 @@ PLAYERSPEED = 5 # Tiles per second
 ENEMYSPEED = 2.5 # Tiles per second
 PLAYERSIZE = 0.75 # Size of player in tiles
 ENEMYSIZE = 0.35 # Radius of enemy in tiles
+COINSIZE = 0.25 # Radius of coin in tiles
 
-bsplit = re.compile(r'B(\d+)x(\d+)\nW (.*)\nC (.*)')
+bsplit = re.compile(r'B(\d+)x(\d+)\nW ?(.*)\nC ?(.*)\nG ?(.*)')
+cptparse = re.compile(r'\(([\d:]+), ?([\d:]+)\)')
 nparse = re.compile(r'V(\d+) (.*)')
 cparse = re.compile(r'V(\d+) \((\d+), ?(\d+)\) R(\d+) A(\d+)')
 
@@ -20,6 +22,7 @@ class Player:
         self.rect = pygame.Rect(self.pos[0] - PLAYERSIZE * ratio // 2,
                                 self.pos[1] - PLAYERSIZE * ratio // 2,
                                 PLAYERSIZE * ratio, PLAYERSIZE * ratio)
+        self.spawn = self.pos
 
     def move(self, dx, dy):
         self.pos = (self.pos[0] + dx, self.pos[1] + dy)
@@ -75,7 +78,7 @@ class Game:
         entitystring = entitystring.split('\n')
         
         # Parse the boardstring
-        ncols, nrows, wallstrs, checkstrs = bsplit.match(boardstring).groups()
+        ncols, nrows, wallstrs, checkstrs, coinstrs = bsplit.match(boardstring).groups()
         ncols, nrows = int(ncols), int(nrows)
         assert CIT[0] % ncols == 0 and CIT[1] % nrows == 0 and \
             (CIT[0] // ncols) == (ratio := CIT[1] // nrows)
@@ -83,9 +86,15 @@ class Game:
         self.dim = (nrows, ncols)
 
         # Parse the wall and checkpoint strings
-        self.wallrects = to_rects(wallstrs, ratio)
-        self.checkpointrects = to_rects(checkstrs, ratio)
+        self.wallrects = to_wallrects(wallstrs, ratio)
+        self.checkpointrects = to_checkpointrects(checkstrs, ratio)
+        coinstrs = ast.literal_eval(coinstrs)
+        if coinstrs:
+            self.coins = (np.array(coinstrs) * ratio - ratio / 2)[:, ::-1].tolist()
+        else:
+            self.coins = []
         self.reached = [False] * len(self.checkpointrects)
+        self.savedcoins = self.coins.copy()
 
         # Parse the entitystring
         self.enemies = []
@@ -107,7 +116,6 @@ class Game:
                     self.enemies.append(CircleEnemy(*map(int, params), ratio))
                 case default:
                     raise ValueError(f'Invalid movement type: {behavior}')
-        self.spawn = self.player.pos
 
     def player_tick(self, dr, dc):
         if (not dr and not dc):
@@ -140,7 +148,8 @@ class Game:
         for i, checkpointrect in enumerate(self.checkpointrects):
             if self.player.rect.colliderect(checkpointrect):
                 self.reached[i] = True
-                self.spawn = checkpointrect.center
+                self.player.spawn = checkpointrect.center
+                self.savedcoins = self.coins.copy()
                 break
 
     def enemy_tick(self):
@@ -150,8 +159,14 @@ class Game:
             if intersects(self.player.rect, enemy.pos, ENEMYSIZE * self.ratio):
                 hit = True
         if hit:
-            self.player.pos = self.spawn
-            self.player.rect.center = self.spawn
+            self.player.pos = self.player.spawn
+            self.player.rect.center = self.player.spawn
+            self.coins = self.savedcoins.copy()
+    
+    def coin_tick(self):
+        for coin in self.coins:
+            if intersects(self.player.rect, coin, COINSIZE * self.ratio):
+                self.coins.remove(coin)
 
 def intersects(rect, center, r):
     circle_distance_x = abs(center[0] - rect.centerx)
@@ -167,7 +182,7 @@ def intersects(rect, center, r):
     corner_distance_sq = corner_x**2.0 + corner_y**2.0
     return corner_distance_sq <= r**2.0
 
-def to_rects(rowstrs, ratio):
+def to_wallrects(rowstrs, ratio):
     rects = []
     rowstrs = rowstrs.split('|')
     for row, rowstr in enumerate(rowstrs):
@@ -182,4 +197,18 @@ def to_rects(rowstrs, ratio):
                 rects.append(pygame.Rect((start - 1) * ratio, row * ratio, (end + 1 - start) * ratio, ratio))
             else:
                 rects.append(pygame.Rect((int(segment) - 1) * ratio, row * ratio, ratio, ratio))
+    return rects
+
+def to_checkpointrects(cptstrs, ratio):
+    rects = []
+    for rowstr, colstr in cptparse.findall(cptstrs):
+        if ':' in rowstr:
+            rs, re = map(int, rowstr.split(':'))
+        else:
+            rs = re = int(rowstr)
+        if ':' in colstr:
+            cs, ce = map(int, colstr.split(':'))
+        else:
+            cs = ce = int(colstr)
+        rects.append(pygame.Rect((cs - 1) * ratio, (rs - 1) * ratio, (ce - cs + 1) * ratio, (re - rs + 1) * ratio))
     return rects

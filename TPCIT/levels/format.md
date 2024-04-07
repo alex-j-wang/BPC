@@ -2,13 +2,18 @@
 ```
 B{ncols}x{nrows}
 W wstr|wstr|wstr...
-C cstr|cstr|cstr...
+C [(rstr, cstr), (rstr, cstr), ...]
+G [(r, c), (r, c), ...]
 ```
-where each `wstr` places walls and each `cstr` places checkpoints as follows:
+Each `wstr` places walls for a single row as follows:
 * `:` to fill the entire row
 * `n` to fill column n
 * `m:n` to fill columns m through n
 * `segment,segment...` where each `segment` matches one of the previous two patterns
+
+Each `(rstr, cstr)` specifies a checkpoint box.  The `rstr` specifies the rows and the `cstr` specifies the columns similar to the 2nd or 3rd option above.
+
+Each `(r, c)` specified a location for a gold coin.
 
 *`ncols` should divide 160, `nrows` should divide 144, and their aspect ratio should equal that of the CIT display*
 
