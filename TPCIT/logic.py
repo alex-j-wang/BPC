@@ -1,7 +1,11 @@
 import numpy as np
 import pygame
 import re
+import os
 import ast
+
+script_dir = os.path.dirname(__file__)
+levels_dir = os.path.join(script_dir, 'levels')
 
 CIT = (160, 144) # Width and height of CIT display
 TPS = 60 # Ticks per second
@@ -13,8 +17,8 @@ COINSIZE = 0.25 # Radius of coin in tiles
 
 bsplit = re.compile(r'B(\d+)x(\d+)\nW ?(.*)\nC ?(.*)\nG ?(.*)')
 cptparse = re.compile(r'\(([\d:]+), ?([\d:]+)\)')
-nparse = re.compile(r'V(\d+) (.*)')
-cparse = re.compile(r'V(\d+) \((\d+), ?(\d+)\) R(\d+) A(\d+)')
+nparse = re.compile(r'V([\d\.]+) (.*)')
+cparse = re.compile(r'V([\d\.]+) \(([\d\.]+), ?([\d\.]+)\) R([\d\.]+) A([\d\.]+)')
 
 class Player:
     def __init__(self, row, col, ratio):
@@ -72,9 +76,9 @@ class Game:
         self.load_level()
 
     def load_level(self):
-        with open(f'levels/L{self.level}.txt') as f:
+        with open(os.path.join(levels_dir, f'L{self.level}.txt')) as f:
             levelstring = f.read()
-        boardstring, entitystring = levelstring.split('\n\n')
+        boardstring, entitystring = levelstring.split('\n\n', 1)
         entitystring = entitystring.split('\n')
         
         # Parse the boardstring
@@ -99,6 +103,8 @@ class Game:
         # Parse the entitystring
         self.enemies = []
         for entitystr in entitystring:
+            if not entitystr:
+                continue
             name, behavior, args = entitystr.split(' ', 2) # Args are MATLAB-indexed
             match behavior:
                 case 'MANUAL':

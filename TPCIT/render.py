@@ -69,7 +69,7 @@ while running:
     if all(game.reached) and not game.savedcoins:
         fade_out(fade_surface, 500)
         game.level += 1
-        if not os.path.exists(f'levels/L{game.level}.txt'):
+        if not os.path.exists(os.path.join(levels_dir, f'L{game.level}.txt')):
             running = False
             win = True
             break
