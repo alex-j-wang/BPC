@@ -1,4 +1,4 @@
-### Board Dimensions, Walls, and Checkpoints
+### Board Dimensions, Walls, Checkpoints, and Gold Coins
 ```
 B{ncols}x{nrows}
 W wstr|wstr|wstr...
