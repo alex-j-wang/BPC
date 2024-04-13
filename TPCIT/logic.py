@@ -73,7 +73,7 @@ class CircleEnemy:
         self.pos = self.center + self.radius * np.array([np.cos(self.angle), np.sin(self.angle)])
 
 class Game:
-    def __init__(self, level=1):
+    def __init__(self, level=3):
         self.level = level
         self.load_level()
 
