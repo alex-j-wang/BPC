@@ -22,5 +22,9 @@ Each line corresponds to one entity with the format `{name} {behavior} {args}`. 
 * `P MANUAL ({r}, {c})` to initialize the player at row `r` and column `c`.
 * `E CIRCLE V{m} ({h}, {k}) R{r} A{a}` to initialize an enemy traveling in a circle of radius `r` centered at `(h, k)`, starting at angle `a`, and with speed multiplier `m`.
 * `E NODE V{m} [(r1, c1), (r2, c2), ...]` to initialize an enemy traveling with speed multiplier `m` between the nodes listed. A list of length 1 will specify a stationary enemy.
+* `W WALL (r, cstr)` to initialize walls on row `r` based on `cstr`. Walls can be outside the map.
 
 *Note that all rows and columns in level files are 1-indexed and inclusive of both endpoints. Spacing inside most lists is flexible as they are parsed using the Python interpreter. Entities can be broken up into blocks as long as the first double newline occurs between the coin specifier and first entity. See [L1](L1.txt) and [L2](L2.txt) for examples.*
+
+### Other
+`DRAW OFF `&nbsp;will disable drawing of walls (space must be included at end).

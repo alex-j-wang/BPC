@@ -17,8 +17,9 @@ COINSIZE = 0.25 # Radius of coin in tiles
 
 bsplit = re.compile(r'B(\d+)x(\d+)\nW ?(.*)\nC ?(.*)\nG ?(.*)')
 cptparse = re.compile(r'\(([\d:]+), ?([\d:]+)\)')
-nparse = re.compile(r'V([\d\.]+) (.*)')
-cparse = re.compile(r'V([\d\.]+) \(([\d\.]+), ?([\d\.]+)\) R([\d\.]+) A([\d\.]+)')
+nparse = re.compile(r'V([\d\.-]+) (.*)')
+cparse = re.compile(r'V([\d\.-]+) \(([\d\.]+), ?([\d\.]+)\) R([\d\.]+) A([\d\.]+)')
+wparse = cptparse
 
 class Player:
     def __init__(self, row, col, ratio):
@@ -30,6 +31,7 @@ class Player:
 
     def move(self, dx, dy):
         self.pos = (self.pos[0] + dx, self.pos[1] + dy)
+        self.pos = (self.pos[0] % CIT[0], self.pos[1] % CIT[1])
         self.rect.center = self.pos
 
 class NodeEnemy:
@@ -62,7 +64,7 @@ class CircleEnemy:
     def __init__(self, vm, row, col, radius, angle, ratio):
         self.center = np.array([col, row]) * ratio - ratio / 2
         self.radius = radius * ratio
-        self.angle = angle
+        self.angle = angle * np.pi / 180
         self.pos = self.center + self.radius * np.array([np.cos(self.angle), np.sin(self.angle)])
         self.rpt = ENEMYSPEED * vm * ratio / self.radius / TPS # Radians per tick
 
@@ -101,6 +103,7 @@ class Game:
         self.savedcoins = self.coins.copy()
 
         # Parse the entitystring
+        self.draw = True
         self.enemies = []
         for entitystr in entitystring:
             if not entitystr:
@@ -120,6 +123,13 @@ class Game:
                     assert name == 'E'
                     params = cparse.match(args).groups()
                     self.enemies.append(CircleEnemy(*map(int, params), ratio))
+                case 'WALL':
+                    assert name == 'W'
+                    row, rowstr = wparse.match(args).groups()
+                    self.wallrects.extend(make_row(int(row) - 1, rowstr, ratio))
+                case 'OFF':
+                    assert name == 'DRAW'
+                    self.draw = False
                 case default:
                     raise ValueError(f'Invalid movement type: {behavior}')
 
@@ -188,21 +198,25 @@ def intersects(rect, center, r):
     corner_distance_sq = corner_x**2.0 + corner_y**2.0
     return corner_distance_sq <= r**2.0
 
+def make_row(row, rowstr, ratio):
+    if rowstr == ':':
+        return [pygame.Rect(0, row * ratio, CIT[0], ratio)] 
+    rects = []
+    for segment in rowstr.split(','):
+        if ':' in segment:
+            start, end = map(int, segment.split(':'))
+            rects.append(pygame.Rect((start - 1) * ratio, row * ratio, (end + 1 - start) * ratio, ratio))
+        else:
+            rects.append(pygame.Rect((int(segment) - 1) * ratio, row * ratio, ratio, ratio))
+    return rects
+
 def to_wallrects(rowstrs, ratio):
     rects = []
     rowstrs = rowstrs.split('|')
     for row, rowstr in enumerate(rowstrs):
         if not rowstr:
             continue
-        if rowstr == ':':
-            rects.append(pygame.Rect(0, row * ratio, CIT[0], ratio))
-            continue
-        for segment in rowstr.split(','):
-            if ':' in segment:
-                start, end = map(int, segment.split(':'))
-                rects.append(pygame.Rect((start - 1) * ratio, row * ratio, (end + 1 - start) * ratio, ratio))
-            else:
-                rects.append(pygame.Rect((int(segment) - 1) * ratio, row * ratio, ratio, ratio))
+        rects.extend(make_row(row, rowstr, ratio))
     return rects
 
 def to_checkpointrects(cptstrs, ratio):
