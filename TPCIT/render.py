@@ -47,7 +47,7 @@ def draw_board(game):
 
 def end_game():
     font = pygame.font.Font(None, 36)  # Use default font and size 36
-    text = font.render("W", True, (0, 255, 0))
+    text = font.render("[Answer]", True, (0, 255, 0))
     text_rect = text.get_rect(center=(CIT[0] // 2, CIT[1] // 2))
     screen.blit(text, text_rect)
     pygame.display.flip()
