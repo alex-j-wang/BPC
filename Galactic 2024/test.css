@@ -1,0 +1,32 @@
+/*
+TODO: check accessibility on chrome 123 and firefox 124
+*/
+div.a {
+    page-break-after: always; /* yes yes */
+    text-indent: hanging 1em; /* partial yes */
+    hanging-punctuation: first; /* no no */
+}
+
+div.b {
+    display: contents; /* no no */
+    text-decoration-skip-ink: all; /* yes yes */
+    position: relative; /* no no */
+}
+
+div.c {
+    text-wrap-style: balance; /* no yes */
+    background-color: rgb(from blue 100 100 100); /* yes yes */
+    background-image: paint(x); /* yes yes */
+}
+
+div.d {
+    widows: 2; /* yes no */
+    font-size-adjust: 0.6; /* no yes */
+    view-transition-name: x; /* yes no */
+}
+
+div.e {
+    background-clip: text; /* partial yes */
+    text-justify: inter-character; /* no yes */
+    zoom: 0.5; /* yes no */
+}

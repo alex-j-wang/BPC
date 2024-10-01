@@ -8,7 +8,7 @@ script_dir = os.path.dirname(__file__)
 levels_dir = os.path.join(script_dir, 'levels')
 
 CIT = (160, 144) # Width and height of CIT display
-TPS = 60 # Ticks per second
+TPS = 10 # Ticks per second
 PLAYERSPEED = 5 # Tiles per second
 ENEMYSPEED = 2.5 # Tiles per second
 PLAYERSIZE = 0.75 # Size of player in tiles
@@ -73,7 +73,7 @@ class CircleEnemy:
         self.pos = self.center + self.radius * np.array([np.cos(self.angle), np.sin(self.angle)])
 
 class Game:
-    def __init__(self, level=3):
+    def __init__(self, level=1):
         self.level = level
         self.load_level()
 
