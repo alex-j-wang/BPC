@@ -1,0 +1,602 @@
+"id","puzzle_id","team_id","request","request_time","claimer","claim_time","response","response_time","status"
+"6","carberry","a29306bd-fd6a-49c7-bb90-45a15abc7117","asdjfhasjkhgdfkajlshdf lkashdflkjahsd flkashdflkj asflkjsdhf ","2024-11-24 16:51:00.598+00","a29306bd-fd6a-49c7-bb90-45a15abc7117",,"[REFUNDED]",,"refunded"
+"7","bould-idea","03d5461c-59ed-4232-ad30-b03b55d9971b","Hi! These are bouldering grips. Moving from the start in a roughly circular path to the finish and indexing into each name I get: unknown, sloper L, unknown, wave W, pocket E, crimp R. I can’t find the definite name for the others two and I have tried all words that fit .L.WER . Help! ","2024-11-24 18:27:01.759+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-24 18:34:21.756+00","Hi! Wave is IDed incorrectly; the other IDs are correct. I suspect correcting the Wave ID will be enough to get you the rest of the way. If you would like a stronger nudge, you are welcome to submit another hint request.","2024-11-24 18:36:06.257+00","refunded"
+"8","shiritori","476d8e6a-3767-4ac0-ac45-b29c0088de75","I understand that the word link together to form a chain, with one set of words if you space them one way, and the other set if you space them differently.  I am unable to find a seven-letter word that fits for the top right photo (SUNRISE doesn't seem to work).  
+
+My progress so far:
+
+RIB-OXBOW-ELOPE-RADIO
+   BOX-BOWEL-OPERA-DIODES
+","2024-11-24 19:50:52.782+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-24 20:41:09.809+00","That's not quite how the central mechanic functions, but your ID's are good. I would suggest trying to figure out what the title of the puzzle means, and I think that will take you the rest of the way. Cheers!","2024-11-24 20:42:19.61+00","answered"
+"9","objections","e793ef7c-486f-4e9d-a3f7-f08a4da1290f","I figured out what types of objections/questions the blanks are, and got AMBIGUOUS, IRRELEVANT, and ARGUMENTATIVE. Indexing into these gives BRT, which doesn't seem to have any further meaning in the context of the puzzle. I saw the flavor text mentions the queen's verdict, but couldn't really see anything there.","2024-11-24 20:45:43.316+00","a29306bd-fd6a-49c7-bb90-45a15abc7117","2024-11-24 21:36:36.215+00","You're on the right track! AMBIGUOUS and ARGUMENTATIVE are right, but IRRELEVANT is incorrect.","2024-11-24 21:39:15.827+00","answered"
+"10","carberry","35ba7f5f-da63-486e-8fed-547c4744d1f6","please help!","2024-11-24 22:26:40.513+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-24 22:27:02.181+00","","2024-11-24 22:27:04.17+00","answered"
+"11","spindle-choreography","64b46370-1012-4ea2-9bb9-a362ce8e00f4","I think I've figured out most of the renamed mathematical objects at this point:
+Neolithic Topology	= Zariski Topology
+Neolite = Vanishing Locus
+I(S) = all polynomials with ker = S (which gives us an ideal)
+Neolithic Closure = Vanishing Locus of I(S)
+Linear Chain = Flag
+Linear Environment = Grassmannian
+
+The second half seems to be a pretty standard construction of the Zariski Topology, but I'm not really sure what the first half is. I think if I can dissect what a Spindle Skeleton is supposed to reference, or interpret ""There is a natural way in which this definition extends to Spindle Skeletons"", the rest would follow. Unfortunately I'm not aware of any construction or analog in linear algebra that resembles the Zariski Topology; could you point me in the right direction to find the right thing? Thanks!","2024-11-24 22:32:49.005+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-24 22:57:56.477+00","Hi! That's some pretty good progress. Your name IDs are correct. The ""natural extension"" referenced there is about the more abstract definition of the Zariski topology on the spectrum of a ring, which is certainly not obvious from the get-go ;). 
+
+You are on the right track though! It is possible to view a Grassmannian as an affine algebraic variety, under which you can look at the Zariski closure of subsets of it. I would suggest digging around a bit more about Grassmannians, and see if you find anything similar to what is described in the worksheet. Best of luck!","2024-11-24 23:06:44.61+00","answered"
+"12","maize-maze","6aefc139-0a0e-432d-a03f-4f0daf5ec1d9","Help! 
+
+The paths are fixed just from the description that I should go straight over the ""letters"" (they look like numbers to me)
+
+Are the positions of the puzzles in the maze relevant? Most of the puzzles I pass through don't belong to this meta...
+
+Numbers go up to 10 and there are 10 different answers","2024-11-25 00:35:02.89+00","6aefc139-0a0e-432d-a03f-4f0daf5ec1d9",,"[REFUNDED]",,"refunded"
+"13","bloodsuckers","36902569-f40b-420b-a823-c7be4fea7550","We're trying to figure this one out and it's tearing us apart, does it have anything to do with braile? Is the lip bite to baby about procreation or drinking blood to stay young? https://docs.google.com/spreadsheets/d/1RgDUJwhw-CHdgwj6wWHLgUeojJPH8iyd15oNw0ZNjyk/edit?gid=1896079905#gid=1896079905 is the google sheet we're working with right now","2024-11-25 01:45:40.66+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-25 02:12:44.257+00","Hey! I think you're conceptually pretty close. You're on the right track with the eventual extraction, but I will point out that you should be able to find a standardized dataset to pull from that should clear up any confusion. A search along the lines of 'list of vampire traits' should help a lot. The one you mentioned is about biting to procreate!","2024-11-25 02:18:58.939+00","refunded"
+"14","maize-maze","36902569-f40b-420b-a823-c7be4fea7550","We're a little stuck on this one. So far, we have this: https://drive.google.com/file/d/1qvj7bHGQv_FLM3fLtZ6LRriQPl9Ip_UC/view?usp=sharing The thing that's not making much sense right now is the meta of it all; we're thinking that the correct path is the white one because it goes through the corn, we have all the answers to everything that both paths pass through but we just can't quite put together how to solve it out and what the numbers mean. Thank you so much, this has been a blast so far!","2024-11-25 02:51:16.587+00","36902569-f40b-420b-a823-c7be4fea7550","2024-11-25 04:23:57.2+00","[REFUNDED]",,"refunded"
+"15","bould-idea","29aab91e-4461-4da9-8a1e-e3e196a9bc91","Hello I'm unsure where to really start or go forward with this puzzle, am i suppose to reverse image search the rock pieces or is this the META to the maze? Thanks!","2024-11-25 03:44:51.412+00","29aab91e-4461-4da9-8a1e-e3e196a9bc91",,"[REFUNDED]",,"refunded"
+"16","objections","29aab91e-4461-4da9-8a1e-e3e196a9bc91","how should i go about solving this puzzle. I tried putting in common objection terms based on the transcript like ""Leading Q"" and ""Speculation"" but didn't get anything from it. I also recognize that the characters and the text seems to be referencing Alice in Wonderland so what would be the first step to solving.","2024-11-25 03:54:34.19+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-25 04:29:13.197+00","Hey! You're right that you should fill in the three sets of blanks and extract the highlighted letter. Each set of blanks is filled with a single word, no abbreviations.
+If you want more help, send us the specific things you've tried for each set of blanks and we can confirm your data.","2024-11-25 04:30:21.997+00","refunded"
+"17","bould-idea","d90332ef-93d1-47f3-a6db-3d6ddfae0f83","hi! im just generally confused here. im assuming im supposed to extract letters from the pictures of rock wall rocks, but i cant figure out from where? the only one i found a name for was ""wave"" and im even skeptical about that. thanks for your help!","2024-11-25 04:06:07.949+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-25 04:30:31.469+00","Hello!
+In climbing/bouldering, different kinds of holds are referred to with different names. If you search for ""climbing holds"" in a search engine then a list should come up. There should be online articles describing each one and what they're like. (Wave is not a commonly accepted climbing hold type - it might be a brand name?)","2024-11-25 04:33:10.907+00","answered"
+"18","objections","29aab91e-4461-4da9-8a1e-e3e196a9bc91","I've currently tried 
+Leading Q
+Speculation (not confident)
+Non responsive
+
+in the order of the blanks that were given, is there a common theme that i'm missing that is probably related to the puzzle or is it just simply objection categories","2024-11-25 05:06:04.671+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-25 05:15:32.159+00","They are objection categories, but you don't seem to be correctly identifying the way that a lawyer would object to each of these questions. (Again, these are all single words; no abbreviations.)
+In the first case, the defense might complain about how vague the question was.
+In the second case, it is unclear how Alice might know the answer to the question being posed.
+In the third, the defense might take issue with the prosecution's tone and behavior.
+Let us know if you need more help.","2024-11-25 05:18:40.386+00","answered"
+"19","public-eye-exam","661c4350-08eb-4b82-be93-57bd32e2494d","Hello there, we think two of the feeders are PARAGRAPHICALLY and CENTRALEXECUTIVECOMMITTEEOFTHESOVIETUNION (and possibly others that we haven't disambiguated). We understand the answer has to do with darts, but not quite sure how. For instance, from PARAGRAPHICALLY, we get PA, GRAPH, and ALLY, which gives us 17, 50, and 50 respectively. We thought at first that the 50s represent bulls-eyes, and therefore to the letter E (as suggested in the eye chart on the puzzle page, which has an E over the bulls-eye). But there does not seem to be a way to fit the 17 (or map it to any given letter). Any nudge to get us unstuck, please?","2024-11-25 05:09:24.26+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-25 05:18:54.851+00","Nice work so far!
+As you say, the letters in the eye exam map to specific squares on the dartboard. The squares in the dartboard that the letters map to are laid out similarly to how they are laid out in the eye exam; and the colorings match up. (So, the E goes on the bullseye, which is red with a green rim; then the next row goes onto white cells only; then the next cell goes onto black cells only; then the next row goes onto thin red and green rectangles.) There's only one way to lay out the letters such that E is at the top, all the letters are laid out correctly relative to each other, and the colors match correctly.
+Once you've done that, take a look at the score values of the cells the letters are on. They should match up to your totals.","2024-11-25 05:21:33.611+00","answered"
+"20","objections","f8fe0659-406c-4474-b85c-edad3bea5e42","Not really sure what to do here. Are we supposed to find real kinds of objections, like from https://en.wikipedia.org/wiki/Objection_(United_States_law)#List_of_objections ? I think the second might be ""irrelevant"" or ""immaterial"" and the last ""argumentative"" which would give ?RT or ?MT, but ART isn't the answer.","2024-11-25 06:08:40.087+00","a29306bd-fd6a-49c7-bb90-45a15abc7117","2024-11-25 08:58:35.191+00","Looking for kinds of objections is correct! The Wikipedia page includes the three types you are looking for. The last one is indeed ""argumentative,"" but the second is neither ""irrelevant"" nor ""immaterial."" Hint: Alice may not know about growing white rose bushes.","2024-11-25 09:05:38.493+00","answered"
+"21","bould-idea","45e86f07-dc04-4972-9e96-ab2dbad89986","Hello!  I have no clue about this puzzle :-( I think 'bould' might hint at 'bold,' but I did some searches related to bouldering and didn’t find anything useful.","2024-11-25 07:47:39.524+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-25 15:26:28.074+00","Hi! You're looking at a bouldering wall. The flavor text suggests you try climbing over the side of the maze -- maybe the order in which you would climb the holds could be useful?","2024-11-25 15:27:28.117+00","answered"
+"22","triple-threat","3e65f7e8-674d-490b-bab2-6154e3c24f2d","I have the 6 horses, but dont know how to extract, I assume per the flavourtext they all placed first? So i tried indexing 1 from each horse?
+Sir Barton
+Omaha
+Whirlaway
+Assault
+Seattle Slew
+American Pharoah","2024-11-25 07:51:12.488+00","a29306bd-fd6a-49c7-bb90-45a15abc7117","2024-11-25 08:49:47.245+00","Those horses are correct. They all placed first, but there's a different way you're supposed to extract. Note that the horses were all pretty early Triple Crown winners.","2024-11-25 08:54:44.005+00","answered"
+"23","objections","8027df2c-5617-4b42-88f3-7d3e88156eb4","Henlo hint answerers! :3
+So far, I've managed to figure out that the missing words all seem to be common objections in court (e.g. ARGUMENTATIVE for the defense's third objection), but all I extract from the squared blanks is BRT.
+
+Am I on the right track with this train of thought, or perhaps a nudge is in order? Thanks! :]","2024-11-25 09:01:40.949+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-25 14:08:57.627+00","Hello! You're really close. It sounds like you have the first and last letters correct, but not the middle one. See if you can find any other objections that fit the second enumeration, and think about whether Alice would even know anything about growing white roses!","2024-11-25 14:11:55.452+00","answered"
+"24","bould-idea","13aa0063-eb28-43fe-a214-f7cf2313218e","Hi, could we have a hint as to how to start this puzzle, we have no idea at all.  Is it world of Warcraft  related? 
+Ta 
+","2024-11-25 14:18:27.74+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-25 15:25:11.37+00","Hi! The flavor text suggests climbing over the maze. You're looking at something related to climbing :)","2024-11-25 15:26:12.019+00","refunded"
+"25","bould-idea","882775a6-1f9e-46a0-9f73-9ff4fa4ff5cd","Walled at breakin, just need a hint to get started :)","2024-11-25 14:29:41.199+00","882775a6-1f9e-46a0-9f73-9ff4fa4ff5cd",,"[REFUNDED]",,"refunded"
+"26","bould-idea","c162cc18-2f8e-48f2-a98f-14685e98c6c1","Hello
+I didn't understand the meaning of this puzzle. I have a few guesses. Maybe the objects represent maps, islands, from the real world or from World of Warcraft. Or maybe it has nothing to do with these maps and I need to figure out how to climb from start to finish, or maybe these objects represent something else.
+I'm sorry I'm not a native English speaker, so maybe there are some mistakes in expression.
+
+Translated with DeepL.com (free version)","2024-11-25 17:22:59.118+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-25 17:23:55.73+00","Hello! You are indeed looking at a climbing wall, and the flavortext suggests you should try to climb to the top. The numbers near the holds suggest that you might want to figure out what the holds are called. Cheers!","2024-11-25 17:25:42.108+00","refunded"
+"27","objections","f69659f7-8848-45dd-ab3e-9961293902a7","I believe this puzzle is based around getting the correct type of objection to why a question can't be asked. However, with ""a spluttering response"" being active, I'm not exactly sure what the answer could be. 
+
+_ _ _ _ _ _ _ _ _ (9)
+A m [b] i g u o u s
+_ _ _ _ _ _ _ _ _ _ (10)
+I r [r] e l e v a n t
+_ _ _ _ _ _ _ _ _ _ _ _ _ (13)
+argumenta[t]ive
+
+Are any of these correct?","2024-11-25 17:57:11.171+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-25 18:37:26.047+00","You're very close. The first and last are correct!
+For the second, the defense is objecting that Alice does not have the expert knowledge that the prosecution is asking for.","2024-11-25 18:40:24.597+00","refunded"
+"28","shiritori","5424071e-33cf-46bb-b908-fba5bdcbcc55","Struggling to identify the top right image - it is a mountain but specifically the name for the cloud / mist that the arrow is pointing to. Google doesn't seem to be much help.
+Have by row:
+Colon / Box / ?
+Diodes / Elope / Opera
+Oxbow / Radio / Rib
+
+With the following chains
+
+RIB -> BOX -> OXBOW (giving comfortably a W)
+RADIO -> DIODES
+ELOPE -> OPERA
+
+I'm thinking COLON may well be wrong? As I think I need a word that starts DES or ERA OR ends RAD or ELO roughly.","2024-11-25 19:14:59.469+00","5424071e-33cf-46bb-b908-fba5bdcbcc55","2024-11-25 19:17:01.631+00","[REFUNDED]",,"refunded"
+"29","bloodsuckers","f69659f7-8848-45dd-ab3e-9961293902a7","https://docs.google.com/spreadsheets/d/1BhTDgUw0pUVCon532NDZ-kXE5DXYm8PbM9tnNTtMzl8/edit?usp=sharing  - that is my current progress on this puzzle. I'm not 100% sure on Count Chocula as I can't find... honestly ANYTHING on him beyond ""he has buck teeth and doesn't count"". Any sort of pointers to solve this would be amazing.","2024-11-25 19:41:26.597+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-25 19:45:04.851+00","Hi! There is a single dataset that has information on all of the vampires in this puzzle. There is one true ability given about Count Chocula. Note that you can likely solve this puzzle without having complete data on one or two of the vampires. Best of luck!","2024-11-25 19:50:32.621+00","refunded"
+"30","previous-commute","5424071e-33cf-46bb-b908-fba5bdcbcc55","Have found that these schools have all changed names since 2020.
+All appear to be at the same address so not sure what I'm trying to find...","2024-11-25 20:05:12.146+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-25 20:06:29.547+00","Hi! You'll note that in addition to the Google Maps links all having schools as destinations, they also have different addresses as starting points. See if you can use these starting points in tandem with the fact that the schools have all changed names to extract a solution.","2024-11-25 20:08:40.039+00","refunded"
+"31","objections","5424071e-33cf-46bb-b908-fba5bdcbcc55","Think this is filling in with the type of objection heard in court.
+
+Have irrelevant and argumentative for the latter 2 but unsure on the first. Tried ART as a fitting word but no","2024-11-25 20:11:46.815+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-25 21:55:53.108+00","Hi! That is the correct thought, and argumentative is spot-on but irrelevant is incorrect. The correct ID has to do with the knowledge possessed by the witness. For the first statement, the correct ID has to do with the form of the question. Hope that helps!","2024-11-25 22:01:15.741+00","refunded"
+"32","shiritori","1ace0a03-2dc7-477e-89a0-85759d3d0bb2","We have: RI-RIB-B-BOX-OX-OXBOW-BOW-BOWEL-EL-ELOPE-OPE-OPERA-RA-RADIO-DIO-DIODES-DES-DESCENT-CENT as a Shiritori style word chain but struggling to link the CENT+RI to get an answer. Example gives SHI+RI=SHIRI so expected a similar mechanism here to close the chain. What are we missing that's staring us in the face! :-)","2024-11-25 20:33:24.46+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-25 20:41:22.349+00","Hi! Your chain is correct, so I think you may be talking yourselves out of the answer a bit. Try reading back through the flavor text for what specifically we're looking for as the answer. I'll refund the hint since I recognize this is a bit of a vague response, but you're so close I fear I can't give anything more away without spoiling the solution for you!","2024-11-25 20:48:18.278+00","refunded"
+"33","previous-commute","5424071e-33cf-46bb-b908-fba5bdcbcc55","Hello again, have been searching around the starting addresses but can't seem to find anything annoyingly.
+I thought it might be a case of an address change / something that used to be at that location but can't find anything concrete in some cases.
+School addresses haven't changed so the journeys should remain the same. Can't be to do with lengths of journies as Google updates in real time.","2024-11-25 22:31:48.511+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-25 22:58:52.611+00","It's the starting addresses themselves that are useful, nothing to do what's at the address. From your guesses it looks like you're close, just double check your spelling/extraction!","2024-11-25 23:02:45.895+00","refunded"
+"34","prada","f69659f7-8848-45dd-ab3e-9961293902a7","1) at least on Vivaldi, this puzzle fails to load at all. Likely something with the way it's rendering in-person vs remote. https://imgur.com/vCivYeu - 2) this puzzle has something to do with adding ""Devil's"" to something - Den, Devil's Den / Advocate, Devil's Advocate / Lettuce, Devil's Lettuce. However, I'm finding the final thing to be a finial, which... I'm not exactly sure what to do with that. Devil's Finial isn't a thing, and I can't think of what other element is being clued in. Any pointers in the right direction?","2024-11-25 22:54:09.014+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-25 22:57:48.411+00","You're basically there. We're looking for the specific type/usage of finial that is pictured. Try reverse image searching if you're stuck.","2024-11-25 22:58:43.636+00","refunded"
+"35","prada","5424071e-33cf-46bb-b908-fba5bdcbcc55","Not a hint request but this puzzle doesn't work - no answer box, no content, nothing available. Not sure if you can fix this?","2024-11-25 23:05:35.775+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-25 23:06:40.179+00","This seems to be a caching issue - try logging out and logging back in again. If that doesn't work, shoot us another hint request.
+(I see you've also submitted a Feedback for this - sorry for missing that!)","2024-11-25 23:07:42.031+00","refunded"
+"36","prada","5424071e-33cf-46bb-b908-fba5bdcbcc55","Not sure? I can only see half of the puzzle so I'm assuming this isn't solveable fully remote?
+Devil's Den / Devil's Advocate / Devil's Lettuce / ? is what I can see","2024-11-25 23:13:46.231+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-25 23:13:57.904+00","Great! The puzzle is now rendering correctly.
+This puzzle is solvable by any team.","2024-11-25 23:14:38.092+00","refunded"
+"37","bloodsuckers","5424071e-33cf-46bb-b908-fba5bdcbcc55","Struggling to find a reasonable source for a lot of these. Seem to get conflicting information depending on which website you use.
+Understand that the mechanic is verifying which of the statements are True / False and using braille for the extract.
+I currently have the letters LOMA????FOLN. Which is complete giberish!","2024-11-25 23:19:35.601+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-25 23:30:03.682+00","Hi! There is a single source that has information about all of these vampires and their traits; searching for something like ""list of vampire traits"" should get you there. That's a good understanding of the mechanic; you should try to figure out whether the braille takes the true traits or the false traits (from what you have, i would try the other option). Hope that helps!","2024-11-25 23:32:29.368+00","refunded"
+"38","bloodsuckers","5424071e-33cf-46bb-b908-fba5bdcbcc55","I was using one of these already but getting a lot of discrepancies still. Have tried Braille both ways and just not getting anywhere :(
+","2024-11-25 23:38:28.182+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-25 23:45:33.397+00","I see. You should use the Vampire Encyclopedia wiki, and I suggest checking some of your data. The first letter of the extraction should be a P.","2024-11-25 23:46:23.808+00","refunded"
+"39","bloodsuckers","5424071e-33cf-46bb-b908-fba5bdcbcc55","Thank you!! I've got PONGOO?CVOLE and clearly still miles off. Really don't get what I;m doing wrong. Sheet 3 if that helps
+https://docs.google.com/spreadsheets/d/1zdcby-fWH0cUyvGTK_CulBRx09oJYTrqiOFxSlUEkTA/edit?usp=sharing 
+Tried Braille both ways and still get some letters that can't work","2024-11-26 00:09:23.254+00","5424071e-33cf-46bb-b908-fba5bdcbcc55",,"[REFUNDED]",,"refunded"
+"40","record-time","9abfee85-1e45-4326-86a9-862e51002dbc","I seem to have trouble with extraction. I've already gathered the names, country of origin and number for each of the records, but I seem to struggle on finding the right way to extract it. Any hints is greatly appreciated!
+
+9, Kidu Mearg (Ethiopia)
+8, Chirag Lukha (UK)
+6, John Fitness (NZ)
+8, Daryl Tan Hong An (SG)
+13, Ashrita Furman (USA)
+1, Emperor Penguin and King Penguin
+15, Oleksandr Usyk (Ukraine)
+11, Neil Rackers (USA)","2024-11-26 01:37:41.729+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-26 01:38:40.4+00","All of your data is correct except for ""Fewest fights to become a four-belt undisputed world boxing champion"". There is someone with a lower number of fights!
+
+Otherwise, you are super close. You have a set of numbers and a set of words/names. Could you try indexing?","2024-11-26 01:41:02.66+00","refunded"
+"41","public-eye-exam","9abfee85-1e45-4326-86a9-862e51002dbc","I believe I have all 5 feeder clues, but I'm getting stumped by understanding what ""sums of letter values"" implies.
+
+My feeders are:
+PARAGRAPHICALLY - PA GRAPH ALLY
+CENTRALEXECUTIVECOMMITTEEOFTHESOVIETUNION - NT LE ITTE
+CLOVER - C LO R
+GUINNESS - G N SS
+BACKFILLS - B AC KFILL
+
+And I've noticed that the eye exam picture is getting more and more clearer. I tried to use an online letter sum calculator, but terms like `GRAPH` and `ALLY` net values beyond 26. Attempting to perform modulo 26 gives strange letter outputs that hardly seem valid. 
+
+Am I understanding the puzzle question correctly? Any tips is much appreciated!","2024-11-26 02:36:17.054+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-26 02:36:45.856+00","Hi! Try making a list of all of the sums you've found, and see if you notice anything. See if you can figure out what the colors on the eye exam clue, and you should be able to use that to extract an answer. Good luck!","2024-11-26 02:38:20.929+00","refunded"
+"42","public-eye-exam","9abfee85-1e45-4326-86a9-862e51002dbc","Hi, I have sums {17,50,50}, {34,17,54}, {3,27,18}, {7, 14, 38}, {2, 4, 50}. I've been staring at the colors and to be honest I do not know how to proceed from here? I've tried summing up by clue to get {117, 105, 48, 49, 56} but even then converting it to chars via ascii leads nowhere. Can a more direct clue be given? I do not understand anything at all, and with the eye exam chart having each word under a different effect (red-green, normal, inverted, red n green) I feel overwhelmed and have no idea how to start or guess my way through. Thanks!","2024-11-26 02:46:32.716+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-26 02:47:03.532+00","Of course. The colors on the eye exam correspond to the colors found on a dartboard, and there is a single orientation and placement of the dartboard so that the E is at the bullseye (as clued by the red with green rim), and the lowest four letters are on their corresponding green and red squares around the edge. Don't sum by clue; instead re-read the flavortext (""scoring you by sums of letter values"") to get an idea as to how to get letters from the numbers. Good luck!","2024-11-26 02:49:40.454+00","refunded"
+"43","prada","8027df2c-5617-4b42-88f3-7d3e88156eb4","Henlo hint answerers! :3
+So far, I'm working with the idea that the first three images all refer to a phrase in the form of ""Devil's [item]"" (e.g. the third image shows cannabis, otherwise known as ""Devil's Lettuce"") and had noticed that the title refers to the movie ""The Devil Wears Prada"". However, I'm a bit confused as to how I could connect the three images AND the movie to the fourth, unknown image. A nudge would be appreciated.
+Thanks! :]","2024-11-26 03:02:20.45+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-26 03:03:46.114+00","Hi! From what I can tell, you are missing some information that you'll need to solve the puzzle. I recommend rereading the flavor text carefully to figure out how to progress.","2024-11-26 03:04:46.369+00","refunded"
+"44","prada","8027df2c-5617-4b42-88f3-7d3e88156eb4","As a follow-up to the last hint, I presume that there's flavortext to the puzzle, but I (as a remote team) can't seem to see it on the site itself. Is the puzzle possibly split into two parts and there may be a on-site half of this as well, or is there supposed to be flavortext attached to it but was removed for unknown reasons?
+Thanks! :]","2024-11-26 03:16:27.632+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-26 03:19:20.624+00","The flavor text I was referring to was the snippet referring to the page as the remote half of the puzzle (and the bit about changing settings). The puzzle has no on-site elements.","2024-11-26 03:21:56.083+00","refunded"
+"45","triple-threat","3e65f7e8-674d-490b-bab2-6154e3c24f2d","HOW","2024-11-26 05:53:12.063+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-26 05:54:08.88+00","The flavortext asks what number each horse was to take the crowns. What if, for each number, you took that letter from the respective horse name?","2024-11-26 05:55:33.859+00","refunded"
+"46","alice","476d8e6a-3767-4ac0-ac45-b29c0088de75","I don't know how to convert the puzzle answers to cards.  I'm guessing that since the first letters of each answer (HECTOR, HELENOFTROY, CLOVER, and the currently unknown answer) becomes the suit (H =  Hearts, C = Clubs, etc), but that's all I have.","2024-11-26 06:53:22.795+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-26 07:01:52.49+00","Hello!
+These answers each map to a different card. Have you tried googling (or search engine-ing) all of them together? (The first letters of the answers are not relevant.)","2024-11-26 09:01:21.173+00","refunded"
+"47","maize-maze","45e86f07-dc04-4972-9e96-ab2dbad89986","Hello! We have mapped out the maze route but are unsure how to extract accordingly. We also don't fully understand the 'letters on the ground' in the flavor text. Our progressing：https://brown-urban-hornet-311.mypinata.cloud/ipfs/QmTYu85KpavRroQqG1fzQeodShvmAwErbvXiQNus36yV9S  Could you please give us some guidance?","2024-11-26 12:13:10.88+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-26 14:29:08.298+00","You've correctly identified the route though the maze, and thus the order that each puzzle extracts into the answer. To find the ""letters on the ground,"" I suggest seeking inspiration from the title of the puzzle.","2024-11-26 14:30:51.425+00","refunded"
+"48","gate-lock","8027df2c-5617-4b42-88f3-7d3e88156eb4","Not a hint, but I'm a tad curious as to why the answer checker isn't available for this metameta. Figured I'd ask, but I might look stupid otherwise... :melting_face:
+Thanks! :]","2024-11-26 13:18:29.319+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-26 14:12:44.305+00","Hi! Once you solve, it should (hopefully) be obvious why there is no answer checker. Good luck!","2024-11-26 14:13:09.952+00","refunded"
+"49","maize-maze","5424071e-33cf-46bb-b908-fba5bdcbcc55","Think I understand how I'm supposed to be moving through the maze.
+
+E.g. starting at Black I have the following route:
+8
+7
+HORSE
+2
+DEVILSBEDPOST
+HELENOFTROY
+3
+GUINNESS
+9
+ANS TO PREFIX
+4
+BUSING
+10
+WAVER
+5
+
+As the maze is burning I'm not sure if I'm supposed to go through hedges etc. but this route feels clean and likewise for the equivalent in white.
+
+I'm not sure what I'm supposed to be doing from here though. I've tried indexing into the answers but doesn't seem to work (e.g. horse isn't long enough). I thought potentially the numbers were just for ordering but then the maze wouldn't have been needed.
+Also are the letters on the ground the numbers?
+
+Just in need of a where to look next really!
+
+Ty","2024-11-26 16:27:35.58+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-26 17:28:15.309+00","Hi! I would look at the title of the puzzle, which should clue something you can do with each of the answers that gives you a letter for each feeder. Hope that helps unstick you!","2024-11-26 17:32:46.473+00","refunded"
+"50","incomplete-instrumentation","9b9db35a-7cf0-4753-a648-51949ddaa586","I've Identified the instruments and connected them to the different questions / parts (Link to Spreadsheet; https://docs.google.com/spreadsheets/d/1SWEZqup0p6eSczAfmT3wR0kwAoOdJAq2XaW_YE4NkDY/edit?usp=sharing) using the start of each instrument to answer the questions, but I cannot figure out the next step. I tried taking the #'s from the question for both the Answers and Leftover sections of the instruments, and used Nutrimatic to see if I was having to rearrange them but couldn't find anything that made sense so I assume that was the wrong direction, but unsure what else to try. ","2024-11-26 17:19:22.041+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-26 17:25:18.045+00","Hi! You should order by the given order of the instruments and look at one of your two extraction columns. That should get you the rest of the way after a final simple step. Good luck!","2024-11-26 17:26:22.958+00","refunded"
+"51","public-eye-exam","b1cf3a21-9450-48bc-906e-4f8213d1618f","I think this is dartboard related somehow, the E I'm assuming is the bull and the lines are the wires so FP is the inner section, RON is the triple section and MAKC is the outer single section (with the bars at the bottom representing doubles).  From feeders have extracted - PA GRAPH and ALLY, NT LE and TTEE, (don't have Bloodsuckers), G N SS and B AC KFILL.  Do the three sections from each feeder represent three dart throws?
+
+Regardless, don't know how to move on from here!","2024-11-26 18:08:37.634+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-26 18:08:53.752+00","Close! The MAKC letters are supposed to be the doubles instead of the outer single section (so each letter is assigned a unique number).
+The three sections from each feeder do represent the three dart throws. Is there a way to perhaps convert these letters - summing values together as clued in the flavortext - into 5 sets of 3 numbers, like dart scores?
+Let us know if you want a stronger hint.","2024-11-26 18:10:55.231+00","refunded"
+"52","public-eye-exam","9b9db35a-7cf0-4753-a648-51949ddaa586","I believe I've gotten the correct feeders for the puzzle, with a possible single error due to a feeder being unsolved.
+I've Connected the feeders to their respective parts and split the letters up as shown in the puzzle
+
+I've also realised the eye-exam portion and the text is likely referring to darts, the three parts in each clue being three darts in each round or turn?
+From there I'm unsure where to proceed / what I might be missing. 
+
+https://docs.google.com/spreadsheets/d/1SWEZqup0p6eSczAfmT3wR0kwAoOdJAq2XaW_YE4NkDY/edit?usp=sharing","2024-11-26 19:44:17.063+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-26 19:44:28.488+00","Hello!
+I like the 4 feeders that you've assigned to this puzzle.
+You should try to associate each letter with a specific square on a dartboard (E is a bullseye, as you predicted; likewise, F and P are specific cells in the outer ring). The cells are selected to preserve the arrangement of the letters on the dartboard relative to each other (as seen in the eye exam). And the cells have specific score values...
+The three parts in each clue refer to each dart throw! Each ""throw"" is going to score a specific amount - the flavortext might help you work out how each dart score is calculated from the letter substrings.
+Let us know if you want a stronger hint.","2024-11-26 19:51:04.112+00","refunded"
+"53","public-eye-exam","9b9db35a-7cf0-4753-a648-51949ddaa586","So I believe I've been able to accurately get the values for the 'darts' from the letter substrings, and started to assign letters to values / cells on the dart board, however then using those darts and converting them into letters, I've hit a brick wall and am unsure if this is from an error, incorrect assumption / logic, or if I'm simply stuck. A correction / stronger hint / push on the right track would be incredibly helpful, thanks.
+
+https://docs.google.com/spreadsheets/d/1SWEZqup0p6eSczAfmT3wR0kwAoOdJAq2XaW_YE4NkDY/edit?usp=sharing","2024-11-26 21:31:14.42+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-26 21:32:18.211+00","Hi! Your work on the substing values looks good. The final feeder is not one of the two you have there. There is a single orientation of the darboard so that the bullseye is on the E and the bottom row lands on the corresponding red and green rectangles (the middle red rectangle is not used). So, you can disambiguate F/P by noting which side each letter corresponds to. Similarly, you should correct the mistake you have with A and K (they are flipped). Best of luck!","2024-11-26 21:37:59.827+00","refunded"
+"54","public-eye-exam","5424071e-33cf-46bb-b908-fba5bdcbcc55","Have 
+PA GRAPH ALLY
+NTLETTE
+HECR
+GNSS
+BACKFILL
+As the relevant letters from the feeder answers to use. 
+
+Have tried comparing against the regular eye test chart and some letters don’t appear. They also don’t appear in the variant chart at the bottom of the puzzle page (is this meant to go in and out of focus by the way?). 
+
+I think it’s to do with finding the relevant value of each letter and summing for each set to give another number / in turn a letter but struggling to find either the right resource or how to tweak the one that we’ve been provided with. 
+
+The mixture of red and green is throwing me","2024-11-26 23:19:24.957+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-27 01:40:41.395+00","Hi! You should take each susbtring of letters separately, as indicated by the separated boxes on BACKFILL. Also, HECR is incorrect; so I would try a different answer for that. The value of a letter is its position in the alphabet (a1z26). See if you notice anything about the values you get (it has something to do with the colors on the eye test), and the flavortext, ""scoring you by sums of letter values"". Good luck!","2024-11-27 01:47:42.535+00","refunded"
+"55","maize-maze","9b9db35a-7cf0-4753-a648-51949ddaa586","Heyo.
+
+I think I have the set of paths correct I understand correctly, but I'm completely clueless on how to further proceed, and don't particularly have any ideas or hypotheses to start working with. 
+Admittedly I only have 6/10 Feeder Answers so I might just not have enough base information, but I also struggled to further solve those. A Kick in the right direction would be greatly appreciated.
+
+https://docs.google.com/spreadsheets/d/1SWEZqup0p6eSczAfmT3wR0kwAoOdJAq2XaW_YE4NkDY/edit?usp=sharing","2024-11-26 23:27:47.975+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:03:35.924+00","Hi! Your paths are correct. To extract, note that the flavor text says you find letters on the ground, indicating that you'll need to extract letters from your feeders at specific points along the path. To do so, I would look to the title of the puzzle for inspiration. Good luck!","2024-11-27 16:04:40.361+00","refunded"
+"56","bloodsuckers","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","We think that we are dealing with Braille for this puzzle. And we need to figure out if the right emojis are true or false, but we just can't arrive at the correct answer. We are now getting [fishp][uxyzv]n[eh][dqgn]n[qt]f[lv][eonyz][pl]A for answer. Some of the characteristics we just can't find and some of the emojis we don't understand.","2024-11-27 02:54:02.288+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-27 13:51:08.62+00","Hey! You're on the right track, and a lot of your letters are close. There is a single information source you should be able to find by searching something along the lines of 'list of vampire traits'. That may help you decipher some of the emojis, but feel free to request a follow-up if there are specific ones that are confusing!","2024-11-27 14:11:27.755+00","refunded"
+"57","gate-lock","476d8e6a-3767-4ac0-ac45-b29c0088de75","I don't have any clue how to begin this one.","2024-11-27 02:56:22.658+00","a29306bd-fd6a-49c7-bb90-45a15abc7117","2024-11-27 11:33:01.695+00","It might help to have the answers of the three metas in front of you. Notice that the [2][4] is bracketed. This might help you extract.","2024-11-27 11:34:13.94+00","answered"
+"58","bould-idea","f7792d64-abcc-4c64-9e89-2335553cc459","We believe the theme of this puzzle is about bouldering, but we don't know how to proceed
+We speculate that we should search for the type names of each ‘rock’, extract them based on numbers in brackets, and arrange them in ascending order. But we don't know where to find these names.
+Can you tell us if our approach is correct and where can we find these names?","2024-11-27 05:09:15.742+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:04:46.851+00","Your approach is correct. Try searching for ""bouldering holds"" or ""climbing wall holds"", or other similar searches. You may need to do multiple searches to find the correct names for all of them.","2024-11-27 16:05:39.238+00","refunded"
+"59","shiritori","94112b39-8eb5-4b6b-8595-b08370960fef","Hi Staff
+
+1.bar??
+2.carton
+3.de??
+4.diode
+5.elope
+6.opera
+7.pointbar
+8.radio
+9.ton??
+
+we got this puzzle is a shiritori game and the images order by alphabet. Please help check the words and give some tips for the rest image(1,3,7,9). Thanks","2024-11-27 07:10:28.991+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-27 14:19:30.171+00","Hey! You are correct that this is based on the Shiritori game. Your identifications for images 4, 5, 6, and 8 are correct, but the others are incorrect. Try to string these words together in the fashion of Shiritori and see if you can make a chain!
+
+I'll point out that the alt-text for each image should include enumerations for each answer, which should help you with some of the trickier ID's. ","2024-11-27 14:25:15.209+00","refunded"
+"60","objections","c162cc18-2f8e-48f2-a98f-14685e98c6c1","Hello
+I think what should be filled in on the horizontal line are the types of OBJECTION, which are ????? , irrelevant and Argumentative, please let me know if I am right. What should I fill in this unknown blank?","2024-11-27 08:01:57.383+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-27 14:25:37.083+00","Hello! Your intuition is correct, and your final objection is the intended solution. For the first one, think about the specificity of the question, and for the second one, consider whether Alice would really have any knowledge about growing white roses. ","2024-11-27 14:28:43.518+00","refunded"
+"61","bould-idea","9dcd5483-5dc5-4ba2-8a91-087def035484","I have tried searching for all title / flavour text but can't find a way into the puzzle. Can you point me in the right direction?
+","2024-11-27 08:12:08.264+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:05:48.977+00","You have a climbing wall with a few holds that all have numbers next to them. I would try to find a way to figure out words that correspond to the holds so that you can extract. Feel free to request another hint if that's not specific enough!","2024-11-27 16:07:28.696+00","refunded"
+"62","prefix","c999d819-6bbb-45d8-926e-c4d68b106eeb","hello, we have found the answers to most of the crossword clues, but we dont know how to continue. here are our answers:
+
+py
+ming
+bag
+tcg? kin?
+
+nt?
+group
+nda
+old
+
+lin
+ate
+nice??
+ret
+
+a puzzle??
+er
+al
+e
+
+can you give us a nudge? thank you!","2024-11-27 12:18:04.352+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:07:43.182+00","Your crossword answers are correct (kin not tcg, though I like that answer better!). To progress further, I would look to the title of the puzzle for inspiration, as well as the fact that you have 4 separate groups.","2024-11-27 16:10:02.376+00","refunded"
+"63","bloodsuckers","cfe2728e-8530-4ff2-bfd1-4c15be4808b7","Hello! Struggling to get this one, I've identified all of the vamps, I think i know what most emojis mean in terms of vampire lore/powers; maybe not the blood to baby one. I'm assuming this will be a braille extraction when complete but cannot get good braille letters for some of the characters, most notably marceline who seemingly checks every box
+","2024-11-27 14:56:15.466+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:10:11.887+00","You are correct that it is a braille extraction. Finding information on the vampires can be difficult, but there should be one complete data set that contains all the information you need. Try searching for something along the lines of ""list of vampire traits"".","2024-11-27 16:11:29.084+00","refunded"
+"64","public-eye-exam","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","Could you guide us on how to solve this problem? We think the feeder answers are paragraphically, taking PA GRAPH ALLY, the long word taking NT LE TTEE, hector/clover/garlic, taking H EC R or C LO R or G AR C, guinness taking G N SS, backfills taking B AC KFILL, if E=1, F P=2, R O N = 3, M A K C = 4, adding the points together doesn't seem to be a valid word","2024-11-27 15:32:54.421+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:12:25.493+00","You're off track in terms of letter values. Try thinking about other ways to map letters to numbers. As for the eye chart, I would look to the clause in the flavor text after the semicolon for inspiration.","2024-11-27 16:13:53.856+00","refunded"
+"65","record-time","c162cc18-2f8e-48f2-a98f-14685e98c6c1","I found the number of times for each record and converted it using A1Z26, am I doing it right please. Here is my result.
+Most shaving cream pies thrown into another person's face with the head facing backwards in 30 seconds	9	I
+Most nail shammered using the back of the hands in 30 seconds	 8	H
+Fewest charge stops to cross New Zealand, in an electric car	6	F
+Most rotating puzzle cubes solved one-handed underwater		8	H
+Most hats thrown onto a hat stand in 30 seconds	13	M
+Fewest eggs per year for a penguin	2	B
+Fewest fights to become a four-belt undisputed world boxing champion	9	I
+Most consecutive NFL games kicking at least two field goals	1	K","2024-11-27 15:35:16.696+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:14:05.32+00","Your answers for all except the penguin and field goals are correct as far as the numbers. The extraction method is not A1Z26, however. You'll need more information about each record than just the number to be able to extract.","2024-11-27 16:15:47.179+00","refunded"
+"66","public-eye-exam","5424071e-33cf-46bb-b908-fba5bdcbcc55","Apologies, don't understand fully what you mean here...
+
+I get that the letters should be in groups and that they are A1Z26 but the values don't seem to be anywhere near regular eye test values.
+
+PA GRAPH ALLY	17	50	50
+NT LE TTEO	34	17	60
+			
+G N SS	7	14	38
+B AC KFILL	2	4	50
+
+Like 34 for example isn't a Snellen value / other eye test notation values (using this https://precision-vision.com/snellen-eye-test-charts-interpretation/)
+From what I can find red / green is just for colourblindness?","2024-11-27 16:12:07.47+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:16:06.051+00","I would look to the clause after the semicolon in the flavor text for inspiration. The design of the eye chart is specific and it intentionally does not match a traditional eye test. Good luck!","2024-11-27 16:17:25.339+00","refunded"
+"67","public-eye-exam","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","For 1st question, A1Z26? For second question, I don’t seem to see semicolon in the flavor text? Also, we need to spend hints every time we ask a follow-up?","2024-11-27 16:19:38.982+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:20:28.436+00","Yes to A1Z26. And oops, looks like there's a slight discrepancy between the solution doc and the uploaded puzzle. The relevant clause is ""But right now your eyes are darting around..."". And don't worry, I'm refunding your hints. I believe in future hunts we should have a system that allows for follow up, we just weren't able to implement it in time.","2024-11-27 16:23:06.199+00","refunded"
+"68","public-eye-exam","5424071e-33cf-46bb-b908-fba5bdcbcc55","There is no semicolon in the flavour text?","2024-11-27 16:20:25.327+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:23:11.385+00","Sorry, it got edited between the solutions doc and uploading. The relevant clause is ""But right now your eyes are darting around..."".","2024-11-27 16:23:39.231+00","refunded"
+"69","prefix","f7792d64-abcc-4c64-9e89-2335553cc459","We tried to solve all the clues, and we thought that there may be a common prefix for each of the four sets respectively, but failed.
+Our progress are shown in here: 
+https://docs.google.com/spreadsheets/d/1zVwhA1dpbL7Hi1uUMD5NZEju0VFBJKEGV6Oslw6f54M/edit?usp=sharing
+Please give us some correction or hint. Appreciate!","2024-11-27 16:21:35.185+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:24:20.857+00","Met is correct for the last group. If you're stuck, try doing searches on word databases to see if you can find prefixes that the words have in common.","2024-11-27 16:25:52.049+00","refunded"
+"70","maize-maze","5424071e-33cf-46bb-b908-fba5bdcbcc55","Recognise now that this is to do with dropping letters but a lot of the answers seem to have multiple possibilities / none at all assuming letter order needs to be preserved.
+For the black route (now assuming the numbers aren't for this puzzle or at least not yet)
+HORSE -> HOSE (R) makes sense as that's something that would put out the burning corn
+DEVILS BED POST -> EVILS (D)
+HELEN OF TROY -> ELEN (H) 
+GUINNESS -> None?
+ANS TO PREFIX 
+BUSING -> USING (B)
+WAVER -> WAVE (R)
+None of these letters fill me with any confidence.
+Apologies for being so useless at these puzzles!","2024-11-27 16:32:15.029+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:58:22.755+00","The numbers are actually what give you the relevant information, not the puzzles on the map. Try mapping the feeders listed at the bottom of the puzzle to the numbers on the map. Hopefully that gives you a better starting point!","2024-11-27 17:00:46.74+00","refunded"
+"71","public-eye-exam","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","Could you give some further hints on this one? I tried to A1Z26 in groups and get 17 50 50;34 17 50; 8 8 18(or 3 27 18 or 7 19 3); 7 14 38; 2 4 44; but still don't know how to proceed. For the eye chart, does darting around mean anagram? if so, doesn't seem to get valid answers...","2024-11-27 16:35:59.006+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 17:00:52.236+00","They are ""darting"" around in a more literal sense. The colors on the eye test should also be a clue for how to use the numbers.","2024-11-27 17:02:10.277+00","refunded"
+"72","gate-lock","9b9db35a-7cf0-4753-a648-51949ddaa586","I (Of course) have all three Metas, and Recognize that each was a pun, though am unsure if that relates to how to use them here.
+I also obviously clocked that 2 and 4 are in square brackets, and am currently assuming that may relate to answer length as I am unsure how to use those with the meta meta answers, and I am now unsure where to go from here. 
+","2024-11-27 16:48:50.656+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 16:57:32.398+00","Best I can say up front is to try to use the 2 and the 4 in combination with the meta answers to extract your answer. Let us know if you need more specific guidance.","2024-11-27 16:58:09.717+00","refunded"
+"73","public-eye-exam","5424071e-33cf-46bb-b908-fba5bdcbcc55","Finally get that this is a dartboard.
+Currently interpreting as follows by row in the eye chart
+
+BULLSEYE -> Red on a Green background
+WHITE SINGLE DIGITS -> white background no trebling or doubling factors applied as no green / red bars.
+BLACK SINGLE DIGITS -> As above but for black
+DOUBLING / TREBLING FACTORS -> Red for black segments and green for white as per dartboard. -> think this one is wrong.
+
+Struggling to see how I should select an individual letter from some groups too.
+
+Currently have this:
+
+17	50	50
+17x2	17	20x3
+19	9 x3	18
+7	7x2	19x2
+2	2x2	50
+
+Leading to
+
+F/P	E	E
+A/K	F/P	M/C
+F/P	R/ON	R/ON
+R/O/N	M/C	A/K
+R/O/N	M/C	E
+
+Possibly looking at the word ROMANCE at the end?","2024-11-27 17:04:34.845+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 17:15:03.883+00","See if you can get a way to turn the dartboard letters into numbers so that you can map the numbers you extracted from the feeders onto the letters on the dartboard.","2024-11-27 17:15:55.13+00","refunded"
+"74","maize-maze","5424071e-33cf-46bb-b908-fba5bdcbcc55","No clue what you mean here. So sorry. Feel really bad for being so crap at this!!
+I think I'd tried something before but can't get a letter.","2024-11-27 17:17:37.594+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 17:18:22.861+00","The puzzles at the bottom of the page are listed in order, so you should be able to match them up with the numbers on the map. To then extract letters out of them, I would look to the title of the puzzle for inspiration.","2024-11-27 17:19:01.698+00","refunded"
+"75","public-eye-exam","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","Maybe the dart means dartboard? if the letters in eye chart are A1Z26 to numbers, but E should mean the 5 part, but from the color it should mean bulls eye? don't understand why F and P are black and why R, O, N are white. and yet M, A, K, C are respectively their colors of 13, 1, 11 and 3...","2024-11-27 17:18:39.22+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 17:19:23.686+00","The eye chart letter scores are strictly based off of regular dartboard scoring, rather than A1Z26.","2024-11-27 17:19:56.02+00","refunded"
+"76","maize-maze","5424071e-33cf-46bb-b908-fba5bdcbcc55","I think my second hint request then still applies. There's multiple possible words / none possible for removing a letter?","2024-11-27 17:20:26.183+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 17:20:51.016+00","Maize and maze are one letter different, but they also have something important in common. You should be able to find similar word pairs for the feeder answers.","2024-11-27 17:22:47.569+00","refunded"
+"77","public-eye-exam","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","I'm more confused now...I need to use A1Z26 for letters in words, but not to use A1Z26 for eye chart scores...as I said M, A, K, C are respectively their colors of 13, 1, 11 and 3 but I don't understand why E is bull's eye which is 50 and why f,p are black(I don't see 6 are in black on dartboard...) and if our objective is to transform first letters in words to numbers then from eye chart from numbers to letters, I don't seem to find 1 on 1 relationship...I seem to get qeeqqeAAAg[gn]s[ab][bd]x...","2024-11-27 17:29:25.114+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 17:36:23.69+00","Again, A1Z26 is unrelated to how the dartboard is set up. You'll need to find a picture of a dartboard and look at the scoring on it to solve the puzzle.","2024-11-27 17:37:13.589+00","refunded"
+"78","public-eye-exam","5424071e-33cf-46bb-b908-fba5bdcbcc55","No? Now concerned I can't make prime numbers. Can you please confirm if any of what I've done is correct?
+
+PA GRAPH ALLY	17	50	50	17	50	50
+NT LE TTEO	34	17	60	17x2	17	20x3
+C LO R	3	27	18	3	9 x3	18
+G N SS	7	14	38	7	7x2	19x2
+B AC KFILL	2	4	50	2	2x2	50
+
+From the eye chart:
+
+5	GR
+6 / 16	W
+18 / 15 / 14	B
+13 / 1 / 11 / 3	RGGR
+
+I'm concerned that none of these are 17 or can make 17. I'm assuming 1 letter per set?","2024-11-27 17:29:49.821+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-27 17:34:29.857+00","Hi! The third substring from the second feeder (TTEO) looks incorrect; check to make sure you're taking the right letters. The third feeder also looks incorrect; you should only need to take doubles. It is indeed 1 letter per set. The left/right orientation of the eye exam matches the left/right orientation you would expect from a dart board, given the bullseye centered at the E and the outer rim along the bottom row of letters. Hopefully that clarifies things!","2024-11-27 17:37:40.415+00","refunded"
+"79","prefix","5424071e-33cf-46bb-b908-fba5bdcbcc55","Have these answers per group
+
+PY
+MING
+BAG
+KIN
+
+NT
+GROUP
+NDA
+OLD
+
+LIN
+ATE
+NICE
+RET
+
+A PUZZLE
+ER
+AL
+E
+
+a) Are any of these incorrect
+b) I think this is about common prefixes which would suggest some answers are wrong but even then struggling to find some that would work (A PUZZLE for example wouldn't have a natural prefix even if just another word or letter / letters).
+","2024-11-27 17:50:33.037+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 18:06:27.833+00","You answers are all correct. Some of the prefixes may be a little obscure, or may be words that commonly go before those endings as opposed to strictly being ""prefixes"". I would recommend using a word database to search if you're stuck.","2024-11-27 18:07:39.198+00","refunded"
+"80","public-eye-exam","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","I already am looking at a dartboard with scores in each part.(Rim is just score, outer red green x2 and inner red green x3 and so on) And as I said, I can understand why MAKC has the respective colors but if they don’t follow A1Z26 that might be just a coincidence that 13 1 11 3 on the rim has the same colors. So I’m just confused why E means bull’s eye and why FP means the black parts and why RON means the white parts. Any hint on those? Also I need to transform letters in brackets using A1Z26 to numbers and then find how numbers correspond to letters on dartboard is this idea right? We have 13 hour time difference I think so I’m staying up to ask questions, just hope you can give some more hints. Thanks a lot!","2024-11-27 18:01:28.8+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 18:03:13.68+00","The way that the eye chart is physically oriented is relevant as well. Imagine that E is the bullseye, and that the letters below it correspond to the sections on the dartboard that are below the bullseye. If you can match the numbers up to the dartboard scoring like that, you should be able to get the answer. I also recommend looking up how scoring changes for the red/green parts on the dartboard.","2024-11-27 18:05:56.838+00","refunded"
+"81","prefix","5424071e-33cf-46bb-b908-fba5bdcbcc55","Have BUM / AGE but can't seem to find anything for the others. (happy to be told at this stage!)
+A PUZZLE is throwing me - thought maybe write / create / solve / make but too many Es. craft too but no.
+","2024-11-27 18:22:51.846+00","5424071e-33cf-46bb-b908-fba5bdcbcc55",,"[REFUNDED]",,"refunded"
+"82","maize-maze","5424071e-33cf-46bb-b908-fba5bdcbcc55","White -> ASBEST?S
+Black -> PASSIB?E
+Screams AS BEST AS PASSIBLE but this is wrong.
+Not sure if this is meant to be a cluephrase but no confirmation of the interim step seems odd?","2024-11-27 18:34:51.439+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 18:52:19.058+00","Double check the A in PASSIBLE. You're pretty much there.","2024-11-27 18:52:44.901+00","refunded"
+"83","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","Have recognised that the remaining 4 feeders lead to the names of 4 playing cards which make up something called the flop in Poker.
+Jack of Diamonds, Ace of Clubs, 4 of Clubs, Queen of Hearts -> I'm assuming that these will remain as the flop for the entire puzzle.
+
+I'm not sure if I'm understanding the game correctly but I think the 2 cards in your possession are combined with any 3 from the flop to form a hand. These hands then have names and rank higher than others. 
+
+E.g. 
+in round 1 I have that their hand would be leading towards a high card (either King of Diamonds / Ace of clubs if that counts as it is in the flop) and my hand would be the same (6 Hearts / Ace of clubs for same reason)
+
+In round 2 I have that their hand would be leading to a two pair and my hand being another high card (5 Hearts / Ace of clubs for same reasoning above).
+
+I'm using the list of hands available at https://www.pokernews.com/poker-hands.htm
+
+I'm also unsure what it means by soldier to the top of the deck -> is this just any playing card / a pictured one?","2024-11-27 19:52:43.25+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 20:08:15.416+00","This is mostly correct, but I would recommend reading up on general poker rules to get a better picture of how the puzzle works if you're unfamiliar. The rules are standard Texas Hold 'Em rules (hence the flop and the turn). As for the last question, think about it in context of the puzzle. Who are you playing against?","2024-11-27 20:11:18.289+00","refunded"
+"84","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","Sadly this one's gonna be impossible - that was all after reading the rules! Thank you for the hunt and gutted to be unable to finish!","2024-11-27 20:12:22.256+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 20:13:31.745+00","Aah you can get there! You're just missing one crucial piece of information regarding the flop (hint: check the size). If you can figure out what's missing, hopefully the puzzle can click for you. Either way, glad you've enjoyed the hunt! We've all been rooting for you; solo solving is no walk in the park.","2024-11-27 20:15:22.259+00","refunded"
+"85","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","What I don't understand is:
+The flop is 3 cards so the 4th card is the turn.
+Then what happens to those cards? Do they get binned and start again or do they always form the flop / turn?
+So essentially is this a case of what would be the 4th card that makes their hand the best possible one?
+With regards to the soldier part -> I'm assuming this is another card of the Heart / Club suit (and more than likely this will be the extract actually noticing the bottom part). 
+So do they get a bonus card making it 7 cards to choose from?","2024-11-27 20:18:50.07+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 20:19:19.702+00","Those cards form the flop and turn for all 12 hands. In Texas Hold 'Em, there's a fifth card placed in the middle after the flop and the turn that both players can use. So, yes there is another card, but both you and the opponent can use it to form your hands.","2024-11-27 20:21:32.826+00","refunded"
+"86","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","Apologies, one last question (for now) and this is purely over confusion of the rules to TH!
+In the flop can both players use the cards or is it like a player A selects what they want and then B situ? Can't really find clarity on this online","2024-11-27 20:22:50.65+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 20:23:22.724+00","Both players can use them.","2024-11-27 20:23:49.831+00","refunded"
+"87","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","Is the first round
+
+You -> 3-C, 6-H, + any other 3 leading to an Ace-C high card situ?
+Them -> (10-C/H), Jack-D, Queen-H, King-D, Ace-C (Flush?)
+
+Meaning the 10 of Clubs / Hearts is the bonus card?","2024-11-27 20:31:28.526+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 20:32:42.767+00","They do have a potential straight draw, but they're already winning this hand without an additional card. Instead of thinking about trying to make their hand stronger, try to think about how you can make your hand stronger.","2024-11-27 20:33:30.758+00","refunded"
+"88","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","I don't see how any of the possible hands can work for you.
+Royal flush -> not enough cards of the same suit.
+Straight flush -> not enough cards of the same suit
+4 of a kind -> not enough of the same card
+3 of a kind -> same as above
+full house -> same as above
+straight -> can get 4 cards in a row if the bonus was a 5 but that's not enough.
+two pair -> not enough of the same card
+one pair -> possible with another 6?
+high card -> Ace of clubs guaranteed?","2024-11-27 20:37:17.941+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 20:37:44.309+00","This is all correct. Another 6 is your only out here.","2024-11-27 20:38:09.017+00","refunded"
+"89","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","Have the following as the extra cards for You to get the best possible hand. I’m assuming all of these are wrong?
+1. 6 Clubs 
+2. 3 Clubs
+3. 6 clubs?
+4. queen clubs
+5. 10 hearts
+6. 5 hearts
+7. Ace of hearts
+8. 9 clubs
+9. 4 clubs / 9 spades
+10. 9 clubs
+11. Ace of clubs
+12. 5 clubs","2024-11-27 21:43:18.17+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 22:00:03.243+00","1, 4, 6, 7, 10, and 12 are correct. A common mistake you're making is finding cards that give you a pair but missing that they also give the opponent a pair (for example in round 3, if you get a 6, both you and your opponent would have a pair and you'd split the pot with A/Q/J high; better than losing, but we want a card that wins). There are poker hand evaluation calculators out there online that can also help you find/double check the answers.","2024-11-27 22:02:46.93+00","refunded"
+"90","bloodsuckers","1ace0a03-2dc7-477e-89a0-85759d3d0bb2","Hi. Got 'PUNGENT' as the first word here using https://vampires.fandom.com/wiki/Vampire_traits_in_folklore_and_fiction and Braille on the attributes,  but the second word is eluding us. One problem is the icon with the old/sick face and arrow and a baby. The other icon set like this with a syringe, an arrow and a baby refers to creating a new vampire through blood transfusion so this one must also be one of the methods of creating  a new vampire, but none of them seem to fit.
+
+Another problem is that a couple of entries in the Wiki say 'Gifted'. Is that a yes or a no? For example Adventure Time and Flight. These ambiguities all appear in the second word and produce the options : [CF][LV][OZE][LV]E. Tried PUNGENT CLOVE.
+
+Can you confirm that PUNGENT is correct and which of the second word letters are wrong?
+
+Thanks","2024-11-27 21:50:46.271+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 22:02:53.035+00","PUNGENT CLOVE is correct, but it's cluing the final answer rather than being the final answer, if that makes sense.","2024-11-27 22:04:54.808+00","refunded"
+"91","alice","5424071e-33cf-46bb-b908-fba5bdcbcc55","Ok take 2.
+
+1	6 Clubs	F
+2	3 Hearts	P
+3	5 Clubs	E
+4	Queen of clubs	L
+5	King of Hearts	Z
+6	5 hearts	R
+7	Ace of Hearts	N
+8	5 Clubs	E
+9	9 Hearts	V
+10	9 clubs	I
+11	5 Hearts	R
+12	5 Clubs	E
+
+Not keen on these letters but may well be misinterpreting the extract too. A-> K for clubs is A to M and A -> K for hearts is N to Z?","2024-11-27 22:48:36.025+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-27 22:51:27.639+00","You do indeed have the extract flipped. Try matching hearts to A-M and clubs to N-Z.","2024-11-27 22:52:12.587+00","refunded"
+"92","bloodsuckers","c999d819-6bbb-45d8-926e-c4d68b106eeb","hello, can we get a nudge for this puzzle?
+
+we have found the following vampires:
+Edward Cullen / Count von Count / Damon Salvatore / Count Chocula / Sarah / Angel / Count Dracula / Lestat de Lioncourt / Bill Compton / Juliet van Heusen / Marceline / Count Duckula 
+
+but we dont know how the 2x3 grid on the right would work (we think the extraction is braille though). we are unsure if the grid only applies to the vampire to the left of it or it generally applies to all vampires (but then we dont know the use for the names of the vampires). can you give us a nudge?","2024-11-28 02:30:35.522+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-28 03:19:05.468+00","Hello! All of your IDs look fine, and your extraction intuition is correct. You can consider the each grid paired with the vampire to its left. See if you can find a dataset online that could help you sort through each grid with respect to the specific vampire.","2024-11-28 03:21:37.892+00","refunded"
+"93","bloodsuckers","c999d819-6bbb-45d8-926e-c4d68b106eeb","hello, we seem to be struggling to find the dataset you mentioned, however we seem to have determined some of the features found in the grids:
+
+arithmomania, can die to sunlight, can die to cross, can see in reflection, has flight, died a second time, can die to fire, can live forever, has fangs, etc.
+
+can you help us find the dataset? thank you!","2024-11-28 03:52:52.715+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-28 16:22:03.888+00","A search along the lines of ""list of vampire traits"" should turn it up.","2024-11-28 16:22:16.433+00","refunded"
+"94","shiritori","f7792d64-abcc-4c64-9e89-2335553cc459","Hello! This is team 反卷地灵殿
+We understand that this question is about word chain, like river-versus-sushi
+For the 9 clues below, we tried to solve some of them and got some words that meet the chain conditions. But we are stuck on the rest of clues.
+Please help us confirm the words we got(and share some hint for those wrong).
+(By the way, we can't understand the meaning of ""Image alt texts contain enumerations for clued words."" Does it only refer to the change of antelope-ant=elope?)
+Our progress is in the table below:
+https://docs.google.com/spreadsheets/d/1rTue7J4yyf0rqbEy0eJldcfgdxtD_xF0Z18d4NX5iDA/edit?gid=0#gid=0
+Thanks!!!","2024-11-28 04:37:08.883+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-28 16:23:17.817+00","1 and 7 are incorrect, one of your options for 2 is correct, and the rest are correct. Note that the images are by default laid in alphabetical order. For 1, try checking for synonyms of the word you have. For 7, focus on the part that's circled (it has a specific name).","2024-11-28 16:25:24.538+00","refunded"
+"95","objections","94112b39-8eb5-4b6b-8595-b08370960fef","Hi Staff. we found the start parts of Court Transcript come from (Alice's Adventures in Wonderland). the first dialogue answer is [That's leading the witness], which not match lengths. And the next dialogue seems not come from the original article. Please give some hints for what should we do next. Thanks in advance.","2024-11-28 08:13:40.338+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-28 16:25:30.846+00","Hi! You're correct that this is not the transcript from the original movie (we've taken some creative liberties!). Instead of trying to fill it in based on the original dialogue, try to fill in the blanks based on how a real lawyer might object in these situations. Googling will likely be helpful.","2024-11-28 16:27:11.735+00","refunded"
+"96","prada","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","We have found that:
+1. The title means ""the devil wears prada"".
+2. Three pictures are: Devil's Den Prehistoric Spring, Devil's Advocate, Devil's Lettuce.
+But we don't know what the ""?"" is, or, how to get the other half of this puzzle.","2024-11-28 08:59:32.141+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-28 16:27:18.387+00","Your pictures are correctly identified. Note the flavor text clues that you're only getting half of the puzzle, and see if you can figure out a way to get the other half.","2024-11-28 16:27:59.85+00","refunded"
+"97","gone-yesterday","9dcd5483-5dc5-4ba2-8a91-087def035484","I derived ""Backfiles"" but says incorrect","2024-11-28 09:16:39.781+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-28 16:28:06.574+00","The ""e"" is incorrect.","2024-11-28 16:29:07.624+00","refunded"
+"98","prefix","94112b39-8eb5-4b6b-8595-b08370960fef","hey staff: we try solve these clue: py/ming/bag/kin; nt/group/nda/old; lin/ate/nice/eme; a puzzle/er/ai/e  However, it seems some clues have serval answers. could you give the hints for what should we focus on? and what should we next do?","2024-11-28 23:32:45.055+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 13:42:50.349+00","You answers are mostly correct. Take another look at Emeritus and the mafia boss clue, though I suspect you may have just made a typo on the latter.
+
+From there, see if you can detect a common thread within each group. I'd recommend taking another look at the title and using a word database to search if you're stuck.","2024-11-29 13:46:28.21+00","refunded"
+"99","maize-maze","f7792d64-abcc-4c64-9e89-2335553cc459","Hello, this is the 反卷地灵殿!!!
+
+For this meta, we got answers to 8 out of 10 feeders ('staze' has not been unlocked yet, and 'Choreography' is described as 'much, much harder than the rest of the hunt')
+
+Based on our understanding of FT, we tried to draw two paths. It seems that the loactions of some of the feeder puzzles are not passed through on the map. We guess that we need to fill the feeders answers into the grid to satisfy the same number corresponding to the same letter (the same is true for the common grids passed by two paths), and finally get 10 letters of answers.
+
+Is our thinking correct? Please give us some hints. Thank you very much!!!
+
+(By the way, I would like to know what the time period is for your reply hints so that we can plan. As a hunter at UTC/GMT+08:00, sometimes it takes 12 hours to get a reply)
+
+Our progress is in the following sheet: https://docs.google.com/spreadsheets/d/1O2OoufyUvpqxISTneDgGFqzg4pAOXFtQQQdj9MqNjzY/edit?gid=0#gid=0","2024-11-29 02:43:37.097+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 14:01:46.516+00","Hello! It looks like you're missing one realization about the feeders. Think about a way in which you could transform each feeder through the addition of only one letter, specifically looking at the title for inspiration. From there, you'll only fill in that single letter on the maze, rather than the entire feeder. Hopefully that will help you keep going, but feel free to follow up if that didn't clarify things!
+
+In regards to hint replies, it's a little tricky to make any promises right now. We are based in the US, so generally 10:00 AM - 11:00 PM EST would be reasonable, but it is also a holiday right now so many of our hinters are out of town spending time with their families. We appreciate your patience!","2024-11-29 14:09:54.054+00","refunded"
+"100","prada","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","We failed to do this. Please give some hint on how to get the other half.","2024-11-29 05:38:26.088+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 14:13:57.868+00","Note that the flavor text says ""This is the remote-team half of the puzzle."" You'll need to change something in your team's settings to access the other half of the puzzle!","2024-11-29 14:15:48.173+00","refunded"
+"101","maize-maze","cfe2728e-8530-4ff2-bfd1-4c15be4808b7","All feeder answers and full map is available to me; i believe the two paths from the chess pieces to the mushrooms have been figured out but need a push in figuring out how to insert feeder answers","2024-11-29 11:04:49.346+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 14:10:09.089+00","Hey there! You'll need to realize something about the feeders before you can proceed. Do you notice anything about the title that you could perhaps apply to the feeders? See if that helps you progress, and feel free to follow up if you'd like a stronger hint. ","2024-11-29 14:11:15.094+00","refunded"
+"102","objections","e249409e-9c95-4faa-baba-b7477335eb35","Do the three missing words correspond to legal objections? For example I think the first could be ""Relevance"" and the third one ""Argumentative"" ","2024-11-29 12:33:24.664+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 13:38:03.124+00","Hi there! Your intuition is correct. ARGUMENTATIVE will be correct for the third objection, but RELEVANCE is not correct for the first. For the first question, think about the specificity of the question, and for the second, consider whether Alice would be likely to know anything about growing white roses. ","2024-11-29 13:39:35.178+00","refunded"
+"103","maize-maze","f7792d64-abcc-4c64-9e89-2335553cc459","Thank you for your previous tips, they are indeed very useful!!! But we still want to ask about a few points:
+1. We are not sure how to draw the two paths (the paths we previously drew (in the previous sheet) obviously do not pass through the locations of some feeders), and whether the numbers on the ground in the maze are useful for this meta.
+2. We realize that we need to add letters to the feeder answers to form new words, but for some answers (such as but), there seems to be more than one way to add (some of our attempts are also updated in the previous sheet), and we don’t know whether the choice of forming new words is related to the choice of path.","2024-11-29 14:52:51.303+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 15:12:48.019+00","The numbers on the ground will be useful here! You can pair the feeders in the order they are given on the puzzle page with the numbers 1-10 on the maze. Recall that you must pass straight through all cells with numbers in them rather than making a turn at those locations, so that will constrain your paths pretty tightly. Starting at a statue and ending on a mushroom, you should be able to cleanly extract two paths. 
+In terms of how to add a new letter, there's only one way to add a letter that maintains a certain property about the word. As a hint, when you say 'maize' and 'maze' aloud, how do they sound?","2024-11-29 15:18:27.021+00","refunded"
+"104","maize-maze","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","1. I initially thought I needed to build two paths through each feeder as described in the question. But ""An Elementary Introduction to Spindle Choreography"" is on the corner, which is confusing.
+2. Are the numbers on the ground the index of the answer? But none of the answers seem to have ten letters. So it could be the order of the route?
+3. How to make the path unique? The conditions stated in the title are somewhat vague.","2024-11-29 16:14:18.831+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 21:00:43.017+00","Hey! You will need to make two paths, each starting at a statue and ending at a mushroom, though I'll caution that you won't necessarily use all of the feeders for both paths. You don't need to worry about the placement of the puzzle piece graphic representing each puzzle, but rather the numbers on the ground. These will correspond to the feeders ordered in the way given on the puzzle page. Once you  determine what single thing is important from each feeder and place them in their respective locations on the map, the paths through the maze should be largely constrained by the need to proceed straight after encountering a letter. ","2024-11-29 21:04:25.263+00","refunded"
+"105","public-eye-exam","f7792d64-abcc-4c64-9e89-2335553cc459","Hello, this is the 反卷地灵殿!!!
+Regarding the feeder for this question, based on the length of the words, we can easily determine that the first two are ""PARARAPHICALLY"" and ""CENTRALEX ECUTIVECOMMITTEEOFTESOVIETIUNION"" (which also have very similar forms to guess from shaded texts), but we have not been able to determine what the remaining feeders are (the unresolved ""bloodsucker"" should be related to Braille, but the answer length seems to be 12).
+At the same time, we noticed that the clarity of the overall images in the question has become increasingly high, and we speculate that this may be related to time (or the number of related feeders solved). Based on the topic of the puzzle, we speculate that we should calculate the score of the letters in brackets on the eye exam chart. At the same time, we noticed the phrase 'five times in a row', which we believe not only refers to the question having five feeders, but may also be related to the five digit binary system
+(By the way, I would like to say that MAIZE MAZE's answer is a great pun, thank you for your ideas!)
+Our progress is in the form (which is a Tencent spreadsheet that should be accessible without logging in): https://docs.qq.com/sheet/DZXlKQXRYQW5FcGxh?tab=BB08J2","2024-11-29 16:54:11.103+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-29 18:29:42.366+00","Hi! Indeed, the eye exam is getting clearer with every feeder you solve. Not every letter in the brackets appears on the eye exam chart; the ""letter values"" referenced have to do with alphabet positions (a1z26). The five digit binary system is not used; there is a way of viewing the eye exam chart that will let you convert the sums of letter values into letters (one for each substring). You should try to figure out what that is; the colors on the eye exam chart and the flavortext should help with that. Good luck!","2024-11-29 18:32:25.499+00","refunded"
+"106","bloodsuckers","46c79fd1-01ce-47bc-8755-c5aead402161","We have identified each vampire and found a wikipedia page for each of them. 
+(spreadsheet here >
+https://docs.google.com/spreadsheets/d/11cF7CpOBu9yvnxvokDEUqx_4WYUbAEDWs7II2hyGG2M/edit?gid=1896079905#gid=1896079905)
+
+We believe that the puzzle is to use the emojis provided to mark if each vampire does/does not have the implied ability (eg the ""fangs"" emoji means ""this vampire has fangs"" and the ""flame skull"" emojis mean ""will be killed by fire"", etc.)
+
+Based on these identifiers, we can use the highlighted cells in each table to make letters that spell out an answer in braille.
+
+However, we are having difficulty finding conclusive answers to a lot of the abilities/weaknesses and in some cases finding contradictions.
+
+Is there a common source for each of these that we should be referencing?","2024-11-29 19:43:30.433+00","1b35f8d7-e362-4060-8376-e76a7c92b671","2024-11-29 19:44:28.778+00","Hi! There is a single source. You may find it by searching for ""list of vampire traits (in folklore and fiction)"". Some traits may not be mentioned; you only need to consider the traits that are mentioned. Hope that helps!","2024-11-29 19:47:25.172+00","refunded"
+"107","record-time","46c79fd1-01ce-47bc-8755-c5aead402161","We have itentified the following information for each record (source is the official Guinness website):
+
+-Most shaving cream pies thrown into another person's face with the head facing backwards in 30 seconds is 9 and was achieved by Kidu Mearg (Ethiopia), on the set of Lo Show Dei Record in Milan, Italy, on 18 February 2022.
+-The most nails hammered using the back of the hands in 30 seconds is 8 and was achieved by Chirag Lukha (UK) in Leicester, Leicestershire, UK, on 16 November 2023.
+-The fewest charge stops to cross New Zealand in an electric car is 6, achieved by John Fitness (New Zealand), from 4 to 5 February 2021.
+-The most rotating puzzle cubes solved one-handed underwater is 8, and was achieved by Daryl Tan Hong An (Singapore) in Singapore, on 18 April 2021.
+-The most hats thrown onto a hat stand in 30 seconds is 13, and was achieved by Ashrita Furman (USA) in Jamaica, New York, USA, on 24 November 2017.
+-The two species of great penguin – namely, the emperor penguin Aptenodytes forsteri of Antarctica and the king penguin A. patagonicus of southernmost South America and several northern subantarctic islands – each lay only a single egg per year. All other species lay two. However, the great penguins' eggs are large with thick shells for protection purposes. In the emperor penguin, 15.7% of the egg's total weight is its shell, which helps very considerably to minimise breakage of what, as a single egg per penguin couple per year, is a precious commodity for its species' survival.
+-The fewest fights to become a four-belt undisputed world boxing champion is 9, achieved by Claressa Shields (USA) from 19 November 2016 to 13 April 2019.
+Neil Rackers (USA) of the Arizona Cardinals established an NFL record by kicking at least two field goals in 11 consecutive games, during the 2005 season.
+
+Taking the numbers from each record and using those to identify letters in the alphabet, we got:
+
+9 - I
+8 - H
+6 - F
+8 - H
+13 - M
+1 - A
+9 - I
+11 - K
+
+which was not the answer","2024-11-29 20:09:56.894+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 21:06:03.41+00","You've got all of the information you need to extract! Instead of taking the numbers from each record as letters, try using them to index into another relevant piece of information you've collected from all of the records. ","2024-11-29 21:07:30.505+00","refunded"
+"108","maize-maze","1ace0a03-2dc7-477e-89a0-85759d3d0bb2","Hi, We have all but one of the answers (not got Spindle) to the listed feeders. The two paths through the maze with the stipulation that you go straight until a wall is hit seem to be:
+
+White Pawn - 1 - 2 - 'Objections' - 4 - 5 - 2 - 6 - 'Incomplete Instrumentation' - 3 - Mushroom
+
+Black Pawn - 8 - 7 - '數學題目' - 2 - 3- 9 - 'Prefix' - 4 - 'Previous Commute' - 10 - 'Flag Code' - 5 - Mushroom
+
+On the plus side, these paths hit all the numbers in the grid, which makes them seem correct. However they don't hit all the given feeders. In fact it doesn't seem possible to hit, for example, 'Spindle Choreography' without back-tracking, which wouldn't be a normal maze path.
+
+Assuming these paths are correct. Stuck on what's next. The numbers 1-10 (with 2 appearing twice) suggest a 10 letter answer with letters somehow plucked from the feeders that are traversed. (The numbers can't be indexing into feeders as none of the answers has more than 6 letters.)
+
+Thank you.","2024-11-29 21:21:35.073+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-11-29 22:24:28.018+00","Looks like you've got the spirit of the maze, but you don't need to worry about where any of the puzzle icons are physically placed on the maze, just the numbers. (I think you may have forgotten to include 7 in the first path, but you seem to get the idea so I'm guessing that's a typo.)
+
+In terms of what to do with the numbers 1-10, check out the puzzle page again looking for an ordered list of 10 things. Check out the feeders again, especially with respect to the title of this puzzle, and see if you can find any ways to apply that same mechanic to fill in the numbered paths with letters. ","2024-11-29 22:29:45.748+00","refunded"
+"109","maize-maze","ae7d3e78-c95d-4e9e-8945-a1a0056b2ca9","We have founds paths from the white statue and black statue to mushrooms when you have to travel straight on numbers in the maze. We are unsure of how to apply the different feeder answers. The answers are too long for the corridors to simply place them from their puzzle's position, so we don't know how to use them. We believe that each number will correspond to a single letter, which we will extract to the answer, but don't know how to associate each number with a letter.
+
+The spreadsheet where we have found the paths and our current list of feeders is at https://docs.google.com/spreadsheets/d/1G_p4oH1cW4Ggq__qJR-0YN8KIia0KrjjYHPevhxdo6Q/edit?gid=1043086636#gid=1043086636","2024-11-30 03:44:47.727+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-30 03:55:37.522+00","Nice work!
+For associating each feeder with a number, note the list of 10 puzzles at the bottom of the puzzle page; that is the numbering for the feeders. (So the first feeder is 1, the second is 2, and so on.)
+As for getting a letter for each feeder, there is a certain transformation that can be done for every feeder, as clued by the title.
+Let us know if you need a stronger nudge!","2024-11-30 03:57:47.986+00","refunded"
+"110","alice","f7792d64-abcc-4c64-9e89-2335553cc459","Based on the puzzle name and FT (poker flop turn), we believe that this question should be about Hold'em, and we may need to speculate on the remaining card to obtain the answer. We believe its four feeders are
+HECTOR
+CLOVER
+DEVILSBEDPOST
+HELENOFTROY
+These feeders all have an initial letter representing the color (H C D H), but how should we determine their numbers?
+Based on the consideration of non repetition, we believe that, for example, HECTOR should not be one of  heart A24569, but we have no other clues.
+Considering that this may not be a very suitable time for you, we will update the table below if we would have any new ideas after the submission:
+https://docs.google.com/spreadsheets/d/1pP2nWpqS5oTAxny6DZKU8LJKwU8Bb8wd-SYuYD9BAcg/edit?gid=0#gid=0","2024-11-30 03:44:57.72+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-30 03:52:36.269+00","Hello!
+You have correctly identified the answers which associate with this meta, but the first letters of the answers are not relevant. There is a way to work out which card is being clued by each answer directly, using just that answer alone. Perhaps try putting all four answers into a search engine together?","2024-11-30 03:54:50.339+00","refunded"
+"111","gate-lock","ae7d3e78-c95d-4e9e-8945-a1a0056b2ca9","We have noticed that the 3 meta puzzles have starting letters M, A, and P, which provide an ordering and reference to the map. We are unsure of how to apply this ordering or the meta answers to the map to the puzzle itself. We are also unsure of what to make of the [2][4]. We have considered that it may be coordinates in the map or indexing into the puzzles/answers to no avail.","2024-11-30 04:36:07.302+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-30 04:37:10.218+00","The meta puzzles themselves are irrelevant, only the meta answers are used in the puzzle. The puzzle is solvable with just the three answers and the [2][4]. If you'd like a little more direction, feel free to file another hint!","2024-11-30 04:38:23.488+00","refunded"
+"112","gate-lock","ae7d3e78-c95d-4e9e-8945-a1a0056b2ca9","We're still not entirely sure of how to use the [2][4]. We also noticed that there is no submission box for the answer. Is that a part of the puzzle itself?","2024-11-30 04:50:57.051+00","e57dc5ac-d987-4627-b933-ae6347d3f10a","2024-11-30 04:51:36.949+00","Once you have the answer, it should (hopefully) be obvious why there is no submission box. Your instinct to index was correct, I would try playing around with the order that you index into the words and how you sequence the letters you get.","2024-11-30 04:52:43.789+00","refunded"
+"113","public-eye-exam","94112b39-8eb5-4b6b-8595-b08370960fef","Hi Staff, based on the feeder length, we locking the 1st,2nd,5th feeders: PARAGRAPHICALLY, CENTRALEXECUTIVECOMMITTEEOFTHESOVIETUNION and BACKFILLS. the 3rd feeder we guessed is HECTOR or CLOVER. we identified the image is Snellen chart. we got the pic(https://en.wikipedia.org/wiki/Snellen_chart#/media/File:Snellen_chart.svg) and searched its orignal chart shows A, C, E, G, L, N, P, R, T, 5, V, Z, B, D, 4, F, H, K, O, S, 3, U, Y, A, C, E, G, L, 2(from Wiki). we try added the letter scores, but nothing came out. pls help with guide us. Thanks.","2024-11-30 10:09:53.302+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-30 22:07:11.43+00","Hello!
+Do the colors in the eye exam remind you of anything? (Not a Snellen chart... something else!) There is also some cluing in the flavortext which might help you identify what game is being played here.
+Adding letter scores is the right idea. The numbers you're getting will make more sense once you know what you're looking at.
+Let us know if you want a stronger nudge!","2024-11-30 22:08:58.124+00","refunded"
+"114","maize-maze","b95bfe97-7915-4fbf-bd91-e94bf1fe56a5","I have found two paths through the maze, which is 1-2-4-5-2-6-7-3(white) and 8-7-2-3-9-4-10-5(black). But I can't find the single thing that is important from each feeder, so I can't extract letters from the locations of the numbers.","2024-11-30 11:31:57.573+00","fee3c434-034b-4f1d-8da0-c3a686c74cec","2024-11-30 22:05:20.617+00","The numbers refer to the list of 10 puzzles at the bottom of the meta, which tell you which number associates with each puzzle.
+As for letters; each answer that feeds into this meta can undergo a specific transformation, as clued by the title. This will help you work out what letters you find on the ground.
+Let us know if you need a stronger nudge.","2024-11-30 22:06:42.418+00","refunded"
+"115","record-time","46c79fd1-01ce-47bc-8755-c5aead402161","guinness","2024-11-30 18:41:08.526+00","46c79fd1-01ce-47bc-8755-c5aead402161",,"[REFUNDED]",,"refunded"
+"116","maize-maze","94112b39-8eb5-4b6b-8595-b08370960fef","Hi Staff, we drew the two paths in the map.[https://p.sda1.dev/20/a53e8a63feea737eadd8fcdaca56c77a/image_1_.png] We assume that the numbers on the path represent the letter positions of the final answer. However, we don't know how to match the feeders and the paths. and didn't realize there was anything special about the location of the question on the map. pls guide us, thanks.","2024-11-30 23:51:02.219+00","5d1374d2-9cc5-48eb-84b2-e183488edff2","2024-12-01 00:48:16.551+00","Hi there! At a glance, it seems like your paths are correct. Instead of worrying about where the icons for each puzzle are placed on the map, try to match each feeder with one of the numbers 1-10 (hint: check the puzzle page again). 
+
+In terms of what to get from each feeder, see if you can spot a pattern among them especially with respect to the title of the puzzle. You'll want to apply that same mechanic to pull out something to place along the paths you've already found. ","2024-12-01 00:51:55.835+00","refunded"
+"117","public-eye-exam","94112b39-8eb5-4b6b-8595-b08370960fef","Hi Staff, we realized this image is regarding Dartboard. But we are unable to match the highlighted letters with the given pattern and dartboard. pls give the further hint. thanks you","2024-12-01 02:12:17.118+00","94112b39-8eb5-4b6b-8595-b08370960fef",,"[REFUNDED]",,"refunded"
