@@ -35,11 +35,11 @@ for responder, hints in hints.sort_values('response_time').groupby('responder'):
             go.Scatter(
                 x=hint_times,
                 y=list(range(hints.shape[0] + 1)),
-                mode="lines",
+                mode="lines+markers",
                 name=responder,
-                line_shape="hv"
+                # line_shape="hv"
             )
         )
 
-fig.write_html("hint_progress.html", include_plotlyjs='cdn')
+fig.write_html("hints.html", include_plotlyjs='cdn')
 fig.show()
