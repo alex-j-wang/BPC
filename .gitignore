@@ -3,4 +3,6 @@ __pycache__
 
 *.ipynb
 *.json
+*.csv
+Receipt*
 .DS_Store

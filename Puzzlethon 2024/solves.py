@@ -49,7 +49,7 @@ for username, solves in guesses.sort_values('submit_time').groupby('username'):
                 ),
                 hoverinfo="text",
                 text=[
-                    f"<b>{solve_time.strftime('%m/%d %-I:%M %p')}<br>{username} → {puzzle}</b>"
+                    f"<b>{solve_time.strftime('%m/%d %-I:%M %p')}<br>{username} • {puzzle}</b>"
                     for (solve_time, puzzle) in zip(solve_times, puzzles)
                 ],
             )
