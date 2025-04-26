@@ -1,3 +1,4 @@
+# GENERATES SOLVE GRAPHS BY INTERACTION TYPE
 # TODO: reverse order so team creation info can be appended instead
 
 import pandas as pd
@@ -97,4 +98,3 @@ for interaction_type in ['in-person', 'remote-box', 'remote']:
         idx += 1
 
     fig.write_html(f'{interaction_type}-solves.html', include_plotlyjs='cdn')
-    fig.show()

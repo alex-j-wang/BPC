@@ -1,3 +1,6 @@
+# GENERATES DATA TABLES
+# TODO: admin statistics
+
 import pandas as pd
 import json
 
@@ -193,5 +196,3 @@ output.write('<!-- shortest hints -->\n')
 output.write(hints.sort_values(by='length')[['request', 'length']].head(10).to_html(index=False))
 
 output.close()
-
-# TODO: admin statistics
