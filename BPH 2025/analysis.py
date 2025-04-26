@@ -1,44 +1,194 @@
 import pandas as pd
+import numpy as np
+import json
 
-# Load data (replace with actual file/database loading)
-hints = pd.read_csv("bph_site_hint.csv")
-follow_ups = pd.read_csv("bph_site_follow_up.csv")
-guesses = pd.read_csv("bph_site_guess.csv")
-solves = pd.read_csv("bph_site_solve.csv")
-unlocks = pd.read_csv("bph_site_unlock.csv")
-teams = pd.read_csv("bph_site_team.csv", index_col='id', date_format='ISO8601')
+# SETUP
+in_person_start = pd.Timestamp("2025-04-12T17:30:00.000Z").tz_convert('US/Eastern')
+in_person_end = pd.Timestamp("2025-04-13T23:00:00.000Z").tz_convert('US/Eastern')
+remote_start = pd.Timestamp("2025-04-19T16:00:00.000Z").tz_convert('US/Eastern')
+remote_end = pd.Timestamp("2025-04-25T16:00:00.000Z").tz_convert('US/Eastern')
+with open('meta_map.json', 'r') as f:
+    meta_map = json.load(f)
 
-hints = hints.loc[hints['team_id'].map(teams.role) == 'user']
-follow_ups = follow_ups.loc[follow_ups['user_id'].map(teams.role) == 'user']
-guesses = guesses.loc[guesses['team_id'].map(teams.role) == 'user']
-solves = solves.loc[solves['team_id'].map(teams.role) == 'user']
-unlocks = unlocks.loc[unlocks['team_id'].map(teams.role) == 'user']
+# Data loading
+unlocks = pd.read_csv('2025-04-25/bph_site_unlock.csv')
+answer_tokens = pd.read_csv('2025-04-25/bph_site_answer_token.csv')
+errata = pd.read_csv('2025-04-25/bph_site_erratum.csv')
+events = pd.read_csv('2025-04-25/bph_site_event.csv')
+feedback = pd.read_csv('2025-04-25/bph_site_feedback.csv')
+follow_ups = pd.read_csv('2025-04-25/bph_site_follow_up.csv')
+guesses = pd.read_csv('2025-04-25/bph_site_guess.csv')
+hints = pd.read_csv('2025-04-25/bph_site_hint.csv')
+m_guards_n_doors_k_choices = pd.read_csv('2025-04-25/bph_site_m_guards_n_doors_k_choices.csv')
+puzzles = pd.read_csv('2025-04-25/bph_site_puzzle.csv')
+solves = pd.read_csv('2025-04-25/bph_site_solve.csv')
+teams = pd.read_csv('2025-04-25/bph_site_team.csv', index_col='id')
+two_guards_two_doors = pd.read_csv('2025-04-25/bph_site_two_guards_two_doors.csv')
 
-follow_ups['puzzle_id'] = follow_ups['hint_id'].map(hints.puzzle_id)
-solves['solve_time'] = pd.to_datetime(solves['solve_time'], format='ISO8601').dt.tz_convert('US/Eastern')
-unlocks['unlock_time'] = pd.to_datetime(unlocks['unlock_time'], format='ISO8601').dt.tz_convert('US/Eastern')
+# Timestamps
+def convert_times(table):
+    for col in table.columns:
+        if "time" in col.lower():
+            try:
+                table[col] = pd.to_datetime(table[col], format='ISO8601').dt.tz_convert('US/Eastern')
+            except Exception as e:
+                print(f"⚠️ Failed to convert column '{col}': {e}")
+    return table
 
-# Most hint requests
-# hint_counts = hints['puzzle_id'].value_counts()
-# follow_up_counts = follow_ups['puzzle_id'].value_counts()
-# total_hint_requests = hint_counts.add(follow_up_counts, fill_value=0)
-# most_hints = total_hint_requests.sort_values(ascending=False).head(1)
-most_hints = hints['puzzle_id'].value_counts().head(1)
+unlocks = convert_times(unlocks)
+answer_tokens = convert_times(answer_tokens)
+errata = convert_times(errata)
+feedback = convert_times(feedback)
+follow_ups = convert_times(follow_ups)
+guesses = convert_times(guesses)
+hints = convert_times(hints)
+m_guards_n_doors_k_choices = convert_times(m_guards_n_doors_k_choices)
+solves = convert_times(solves)
+teams = convert_times(teams)
+two_guards_two_doors = convert_times(two_guards_two_doors)
 
-# Most guesses
-most_guesses = guesses['puzzle_id'].value_counts().head(1)
+follow_ups.rename(columns={'user_id': 'team_id'}, inplace=True)
 
-# Most solves
-most_solves = solves['puzzle_id'].value_counts().head(1)
+# Filtering
+unlocks = unlocks.loc[unlocks.team_id.map(teams.role) == 'user']
+answer_tokens = answer_tokens.loc[answer_tokens.team_id.map(teams.role) == 'user']
+feedback = feedback.loc[feedback.team_id.map(teams.role) == 'user']
+follow_ups = follow_ups.loc[follow_ups.team_id.map(teams.role) == 'user']
+guesses = guesses.loc[guesses.team_id.map(teams.role) == 'user']
+hints = hints.loc[hints.team_id.map(teams.role) == 'user']
+m_guards_n_doors_k_choices = m_guards_n_doors_k_choices.loc[m_guards_n_doors_k_choices.team_id.map(teams.role) == 'user']
+solves = solves.loc[solves.team_id.map(teams.role) == 'user']
+teams = teams.loc[teams.role == 'user']
+two_guards_two_doors = two_guards_two_doors.loc[two_guards_two_doors.team_id.map(teams.role) == 'user']
 
-# Fastest solve
-merged = pd.merge(solves, unlocks, on=['team_id', 'puzzle_id'])
-merged['duration'] = merged['solve_time'] - merged['unlock_time']
-fastest_solves = merged[['puzzle_id', 'team_id', 'duration', 'type_x', 'type_y']].sort_values(by='duration', ascending=True).head(20)
+# Modifications
+hints.request = hints.request.fillna("")
+follow_ups['puzzle_id'] = follow_ups.hint_id.map(hints.puzzle_id)
+guesses['length'] = guesses.guess.map(len)
+hints['length'] = hints.request.map(len)
+teams['end_time'] = teams.interaction_type.map({
+    'in-person': in_person_end,
+    'remote': remote_end
+})
+teams['member_count'] = teams.members.map(lambda s: len(json.loads(s)))
+teams['guess_count'] = guesses.groupby(guesses.team_id).size().reindex(teams.index, fill_value=0)
+teams['hint_count'] = hints.groupby(hints.team_id).size().reindex(teams.index, fill_value=0)
+teams['total_hint_count'] = teams.hint_count + follow_ups.groupby(follow_ups.team_id).size().reindex(teams.index, fill_value=0)
+teams.loc[(teams.interaction_type == 'remote') & teams.has_box, 'interaction_type'] = 'remote-box'
 
-# Display results
-print("Most Hint Requests:", most_hints)
-print("Most Guesses:", most_guesses)
-print("Most Solves:", most_solves)
-print("Fastest Solves:")
-print(fastest_solves)
+# Remove entries after time cutoff
+unlocks = unlocks.loc[unlocks.unlock_time < unlocks.team_id.map(teams.end_time)]
+answer_tokens = answer_tokens.loc[answer_tokens.timestamp < answer_tokens.team_id.map(teams.end_time)]
+guesses = guesses.loc[guesses.submit_time < guesses.team_id.map(teams.end_time)]
+m_guards_n_doors_k_choices = m_guards_n_doors_k_choices.loc[m_guards_n_doors_k_choices.time < m_guards_n_doors_k_choices.team_id.map(teams.end_time)]
+solves = solves.loc[solves.solve_time < solves.team_id.map(teams.end_time)]
+two_guards_two_doors = two_guards_two_doors.loc[two_guards_two_doors.time < two_guards_two_doors.team_id.map(teams.end_time)]
+
+output = open("index.html", "w")
+
+# QUICK STATS
+output.write('<!-- QUICK STATS -->\n')
+
+quick_stats = pd.DataFrame(columns=['in-person', 'remote-box', 'remote'])
+quick_stats.loc['teams'] = teams.interaction_type.value_counts()
+quick_stats.loc['finishers'] = teams.loc[teams.finish_time.notna() & (teams.finish_time < teams.end_time)].interaction_type.value_counts()
+quick_stats.loc['action meta solves'] = solves.loc[solves.puzzle_id == 'drop-the', 'team_id'].map(teams.interaction_type).value_counts()
+quick_stats.loc['participants'] = teams.groupby(teams.interaction_type).member_count.sum()
+quick_stats.loc['hints asked'] = hints.groupby(hints.team_id.map(teams.interaction_type)).size()
+quick_stats.loc['guesses'] = guesses.groupby(guesses.team_id.map(teams.interaction_type)).size()
+quick_stats.loc['solves'] = solves.groupby(solves.team_id.map(teams.interaction_type)).size()
+
+quick_stats['total'] = quick_stats.sum(axis=1)
+output.write(quick_stats.to_html())
+
+# TEAM STATS
+output.write('<!-- TEAM STATS -->\n')
+
+output.write('<!-- fewest guesses -->\n')
+output.write(
+    teams.loc[teams.finish_time.notna() & (teams.finish_time < teams.end_time), ['display_name', 'guess_count']]
+    .sort_values(by='guess_count').head(10).to_html(index=False))
+
+output.write('<!-- most guesses -->\n')
+output.write(teams[['display_name', 'guess_count']].sort_values(by='guess_count', ascending=False).head(10).to_html(index=False))
+
+output.write('<!-- fewest hints -->\n')
+output.write(
+    teams.loc[teams.finish_time.notna() & (teams.finish_time < teams.end_time), ['display_name', 'hint_count']]
+    .sort_values(by='hint_count').head(15).to_html(index=False))
+
+output.write('<!-- most hints -->\n')
+output.write(teams[['display_name', 'hint_count']].sort_values(by='hint_count', ascending=False).head(10).to_html(index=False))
+
+output.write('<!-- most hints + follow-ups -->\n')
+output.write(teams[['display_name', 'total_hint_count']].sort_values(by='total_hint_count', ascending=False).head(10).to_html(index=False))
+
+# PUZZLE STATS
+puzzle_stats = pd.DataFrame(index=puzzles.id, columns=['guesses', 'solves', 'backsolves', 'hints', 'hints + follow-ups'])
+puzzle_stats.guesses = guesses.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
+puzzle_stats.solves = solves.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
+
+# Backsolves
+output.write('<!-- PUZZLE STATS -->\n')
+
+solves['meta_id'] = solves['puzzle_id'].map(meta_map)
+merged = solves.merge(
+    solves,
+    left_on=['team_id', 'meta_id'],
+    right_on=['team_id', 'puzzle_id'],
+    suffixes=('', '_meta')
+)
+filtered = merged[merged.solve_time_meta < merged.solve_time]
+puzzle_stats.backsolves = filtered.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
+
+puzzle_stats.hints = hints.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
+puzzle_stats['hints + follow-ups'] = puzzle_stats.hints + follow_ups.puzzle_id.value_counts().reindex(puzzles.id, fill_value=0)
+
+output.write('<!-- primary stats -->\n')
+output.write(puzzle_stats.reset_index().to_html(index=False))
+
+other_stats = guesses.loc[~guesses.is_correct].groupby(guesses.puzzle_id).guess.value_counts().reset_index(level=1)
+other_stats = other_stats.loc[~other_stats.index.duplicated(keep='first')]
+other_stats.rename(columns={'guess': 'top_incorrect', 'count': 'relative_frequency'}, inplace=True)
+other_stats.relative_frequency = other_stats.relative_frequency / puzzle_stats.solves * 100
+other_stats.sort_values(by='relative_frequency', ascending=False, inplace=True)
+other_stats.relative_frequency = other_stats.relative_frequency.round(1)
+
+output.write('<!-- secondary stats -->\n')
+output.write(other_stats.reset_index().to_html(index=False))
+
+# MISCELLANEOUS STATS
+output.write('<!-- MISCELLANEOUS STATS -->\n')
+
+first_solves = (
+    solves
+    .sort_values(by='solve_time')
+    .assign(interaction_type=solves.team_id.map(teams.interaction_type))
+    .groupby('interaction_type')
+    .head(1)
+)
+first_solves['display_name'] = first_solves.team_id.map(teams.display_name)
+first_solves['solve_duration'] = (first_solves.solve_time - first_solves.interaction_type.map({
+    'in-person': in_person_start,
+    'remote-box': remote_start,
+    'remote': remote_start,
+})).apply(lambda td: (
+    f'{int(td.total_seconds() // 60)}m {td.total_seconds() % 60:.3f}s'
+))
+
+output.write('<!-- first solves -->\n')
+output.write(first_solves[['interaction_type', 'puzzle_id', 'display_name', 'solve_duration']].to_html(index=False))
+
+output.write('<!-- longest guesses -->\n')
+output.write(guesses.sort_values(by='length', ascending=False)[['guess', 'length']].head(25).to_html(index=False))
+output.write('<!-- shortest guesses -->\n')
+output.write(guesses.sort_values(by='length')[['guess', 'length']].head(10).to_html(index=False))
+
+output.write('<!-- longest hints -->\n')
+output.write(hints.sort_values(by='length', ascending=False)[['request', 'length']].head(1).to_html(index=False))
+output.write('<!-- shortest hints -->\n')
+output.write(hints.sort_values(by='length')[['request', 'length']].head(10).to_html(index=False))
+
+output.close()
+
+# TODO: admin statistics
