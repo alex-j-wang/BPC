@@ -1,34 +1,37 @@
 import pandas as pd
-import numpy as np
 import json
 
+data_folder = '2025-04-25'
+
 # SETUP
-in_person_start = pd.Timestamp("2025-04-12T17:30:00.000Z").tz_convert('US/Eastern')
-in_person_end = pd.Timestamp("2025-04-13T23:00:00.000Z").tz_convert('US/Eastern')
-remote_start = pd.Timestamp("2025-04-19T16:00:00.000Z").tz_convert('US/Eastern')
-remote_end = pd.Timestamp("2025-04-25T16:00:00.000Z").tz_convert('US/Eastern')
+in_person_start = pd.Timestamp('2025-04-12T17:30:00.000Z').tz_convert('US/Eastern')
+in_person_end = pd.Timestamp('2025-04-13T23:00:00.000Z').tz_convert('US/Eastern')
+remote_start = pd.Timestamp('2025-04-19T16:00:00.000Z').tz_convert('US/Eastern')
+remote_end = pd.Timestamp('2025-04-25T16:00:00.000Z').tz_convert('US/Eastern')
+
+# puzzle_id -> corresponding meta puzzle_id
 with open('meta_map.json', 'r') as f:
     meta_map = json.load(f)
 
 # Data loading
-unlocks = pd.read_csv('2025-04-25/bph_site_unlock.csv')
-answer_tokens = pd.read_csv('2025-04-25/bph_site_answer_token.csv')
-errata = pd.read_csv('2025-04-25/bph_site_erratum.csv')
-events = pd.read_csv('2025-04-25/bph_site_event.csv')
-feedback = pd.read_csv('2025-04-25/bph_site_feedback.csv')
-follow_ups = pd.read_csv('2025-04-25/bph_site_follow_up.csv')
-guesses = pd.read_csv('2025-04-25/bph_site_guess.csv')
-hints = pd.read_csv('2025-04-25/bph_site_hint.csv')
-m_guards_n_doors_k_choices = pd.read_csv('2025-04-25/bph_site_m_guards_n_doors_k_choices.csv')
-puzzles = pd.read_csv('2025-04-25/bph_site_puzzle.csv')
-solves = pd.read_csv('2025-04-25/bph_site_solve.csv')
-teams = pd.read_csv('2025-04-25/bph_site_team.csv', index_col='id')
-two_guards_two_doors = pd.read_csv('2025-04-25/bph_site_two_guards_two_doors.csv')
+unlocks = pd.read_csv(f'{data_folder}/bph_site_unlock.csv')
+answer_tokens = pd.read_csv(f'{data_folder}/bph_site_answer_token.csv')
+errata = pd.read_csv(f'{data_folder}/bph_site_erratum.csv')
+events = pd.read_csv(f'{data_folder}/bph_site_event.csv')
+feedback = pd.read_csv(f'{data_folder}/bph_site_feedback.csv')
+follow_ups = pd.read_csv(f'{data_folder}/bph_site_follow_up.csv')
+guesses = pd.read_csv(f'{data_folder}/bph_site_guess.csv')
+hints = pd.read_csv(f'{data_folder}/bph_site_hint.csv')
+m_guards_n_doors_k_choices = pd.read_csv(f'{data_folder}/bph_site_m_guards_n_doors_k_choices.csv')
+puzzles = pd.read_csv(f'{data_folder}/bph_site_puzzle.csv')
+solves = pd.read_csv(f'{data_folder}/bph_site_solve.csv')
+teams = pd.read_csv(f'{data_folder}/bph_site_team.csv', index_col='id')
+two_guards_two_doors = pd.read_csv(f'{data_folder}/bph_site_two_guards_two_doors.csv')
 
 # Timestamps
 def convert_times(table):
     for col in table.columns:
-        if "time" in col.lower():
+        if 'time' in col.lower():
             try:
                 table[col] = pd.to_datetime(table[col], format='ISO8601').dt.tz_convert('US/Eastern')
             except Exception as e:
@@ -62,7 +65,7 @@ teams = teams.loc[teams.role == 'user']
 two_guards_two_doors = two_guards_two_doors.loc[two_guards_two_doors.team_id.map(teams.role) == 'user']
 
 # Modifications
-hints.request = hints.request.fillna("")
+hints.request = hints.request.fillna('')
 follow_ups['puzzle_id'] = follow_ups.hint_id.map(hints.puzzle_id)
 guesses['length'] = guesses.guess.map(len)
 hints['length'] = hints.request.map(len)
@@ -84,7 +87,7 @@ m_guards_n_doors_k_choices = m_guards_n_doors_k_choices.loc[m_guards_n_doors_k_c
 solves = solves.loc[solves.solve_time < solves.team_id.map(teams.end_time)]
 two_guards_two_doors = two_guards_two_doors.loc[two_guards_two_doors.time < two_guards_two_doors.team_id.map(teams.end_time)]
 
-output = open("index.html", "w")
+output = open('index.html', 'w')
 
 # QUICK STATS
 output.write('<!-- QUICK STATS -->\n')
