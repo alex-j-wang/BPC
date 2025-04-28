@@ -2,6 +2,8 @@
 # TODO: admin statistics
 
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 import json
 
 data_folder = '2025-04-25'
@@ -12,7 +14,7 @@ in_person_end = pd.Timestamp('2025-04-13T23:00:00.000Z').tz_convert('US/Eastern'
 remote_start = pd.Timestamp('2025-04-19T16:00:00.000Z').tz_convert('US/Eastern')
 remote_end = pd.Timestamp('2025-04-25T16:00:00.000Z').tz_convert('US/Eastern')
 
-# puzzle_id -> corresponding meta puzzle_id
+# puzzle_id -> list of corresponding meta `puzzle_id`s
 with open('meta_map.json', 'r') as f:
     meta_map = json.load(f)
 
@@ -137,14 +139,15 @@ puzzle_stats.solves = solves.puzzle_id.value_counts().reindex(puzzle_stats.index
 # Backsolves
 output.write('<!-- PUZZLE STATS -->\n')
 
-solves['meta_id'] = solves['puzzle_id'].map(meta_map)
-merged = solves.merge(
+solves['meta_ids'] = solves['puzzle_id'].map(meta_map)
+solves_exploded = solves.explode('meta_ids')
+merged = solves_exploded.merge(
     solves,
-    left_on=['team_id', 'meta_id'],
+    left_on=['team_id', 'meta_ids'],
     right_on=['team_id', 'puzzle_id'],
     suffixes=('', '_meta')
 )
-filtered = merged[merged.solve_time_meta < merged.solve_time]
+filtered = merged[merged.solve_time_meta < merged.solve_time].drop_duplicates(subset=['team_id', 'puzzle_id'])
 puzzle_stats.backsolves = filtered.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
 
 puzzle_stats.hints = hints.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
@@ -196,3 +199,16 @@ output.write('<!-- shortest hints -->\n')
 output.write(hints.sort_values(by='length')[['request', 'length']].head(10).to_html(index=False))
 
 output.close()
+
+# Plot guess accuracy
+guesses.sort_values(by='submit_time', inplace=True)
+accuracy = guesses.is_correct.cumsum() / (1 + np.arange(len(guesses)))
+
+plt.plot(guesses.submit_time, accuracy)
+plt.xticks(rotation=-45, ha='left', rotation_mode='anchor')
+plt.xlabel('Time')
+plt.ylabel('Cumulative Accuracy')
+plt.title('Guess Accuracy Over Time')
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('accuracy.svg')
