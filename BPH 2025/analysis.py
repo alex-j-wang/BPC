@@ -128,11 +128,11 @@ output.write(
 output.write('<!-- most hints -->\n')
 output.write(teams[['display_name', 'hint_count']].sort_values(by='hint_count', ascending=False).head(10).to_html(index=False))
 
-output.write('<!-- most hints + follow-ups -->\n')
+output.write('<!-- most hints + replies -->\n')
 output.write(teams[['display_name', 'total_hint_count']].sort_values(by='total_hint_count', ascending=False).head(10).to_html(index=False))
 
 # PUZZLE STATS
-puzzle_stats = pd.DataFrame(index=puzzles.id, columns=['guesses', 'solves', 'backsolves', 'hints', 'hints + follow-ups'])
+puzzle_stats = pd.DataFrame(index=puzzles.id, columns=['guesses', 'solves', 'backsolves', 'hints', 'hints + replies', 'tokens'])
 puzzle_stats.guesses = guesses.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
 puzzle_stats.solves = solves.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
 
@@ -151,7 +151,8 @@ filtered = merged[merged.solve_time_meta < merged.solve_time].drop_duplicates(su
 puzzle_stats.backsolves = filtered.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
 
 puzzle_stats.hints = hints.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
-puzzle_stats['hints + follow-ups'] = puzzle_stats.hints + follow_ups.puzzle_id.value_counts().reindex(puzzles.id, fill_value=0)
+puzzle_stats['hints + replies'] = puzzle_stats.hints + follow_ups.puzzle_id.value_counts().reindex(puzzles.id, fill_value=0)
+puzzle_stats.tokens = solves.loc[solves.type == 'answer_token', 'puzzle_id'].value_counts().reindex(puzzle_stats.index, fill_value=0)
 
 output.write('<!-- primary stats -->\n')
 output.write(puzzle_stats.reset_index().to_html(index=False))
@@ -197,6 +198,15 @@ output.write('<!-- longest hints -->\n')
 output.write(hints.sort_values(by='length', ascending=False)[['request', 'length']].head(1).to_html(index=False))
 output.write('<!-- shortest hints -->\n')
 output.write(hints.sort_values(by='length')[['request', 'length']].head(10).to_html(index=False))
+
+# EVENT STATS
+event_stats = pd.DataFrame(columns=['submitted', 'used'])
+for event in answer_tokens.event_id.unique():
+    event_stats.loc[event, 'submitted'] = (answer_tokens.event_id == event).sum()
+    event_stats.loc[event, 'used'] = ((answer_tokens.event_id == event) & answer_tokens.puzzle_id).sum()
+
+output.write('<!-- EVENT STATS -->\n')
+output.write(event_stats.to_html())
 
 output.close()
 
