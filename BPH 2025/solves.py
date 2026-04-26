@@ -68,6 +68,10 @@ for interaction_type in ['in-person', 'remote-box', 'remote']:
                 marker_colors.append(color if team_solves.loc[puzzle, 'type'] == 'guess' else 'white')
                 stroke_colors.append(color)
                 marker_sizes.append(5)
+            
+        # Gate to hunt completions
+        if meta_count != len(metas):
+            continue
 
         fig.add_trace(
             go.Scatter(

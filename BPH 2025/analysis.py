@@ -85,12 +85,12 @@ teams['total_hint_count'] = teams.hint_count + follow_ups.groupby(follow_ups.tea
 teams.loc[(teams.interaction_type == 'remote') & teams.has_box, 'interaction_type'] = 'remote-box'
 
 # Remove entries after time cutoff
-unlocks = unlocks.loc[unlocks.unlock_time < unlocks.team_id.map(teams.end_time)]
-answer_tokens = answer_tokens.loc[answer_tokens.timestamp < answer_tokens.team_id.map(teams.end_time)]
-guesses = guesses.loc[guesses.submit_time < guesses.team_id.map(teams.end_time)]
-m_guards_n_doors_k_choices = m_guards_n_doors_k_choices.loc[m_guards_n_doors_k_choices.time < m_guards_n_doors_k_choices.team_id.map(teams.end_time)]
-solves = solves.loc[solves.solve_time < solves.team_id.map(teams.end_time)]
-two_guards_two_doors = two_guards_two_doors.loc[two_guards_two_doors.time < two_guards_two_doors.team_id.map(teams.end_time)]
+unlocks = unlocks[unlocks.unlock_time < unlocks.team_id.map(teams.end_time)]
+answer_tokens = answer_tokens[answer_tokens.timestamp < answer_tokens.team_id.map(teams.end_time)]
+guesses = guesses[guesses.submit_time < guesses.team_id.map(teams.end_time)]
+m_guards_n_doors_k_choices = m_guards_n_doors_k_choices[m_guards_n_doors_k_choices.time < m_guards_n_doors_k_choices.team_id.map(teams.end_time)]
+solves = solves[solves.solve_time < solves.team_id.map(teams.end_time)]
+two_guards_two_doors = two_guards_two_doors[two_guards_two_doors.time < two_guards_two_doors.team_id.map(teams.end_time)]
 
 output = open('index.html', 'w')
 
@@ -99,7 +99,7 @@ output.write('<!-- QUICK STATS -->\n')
 
 quick_stats = pd.DataFrame(columns=['in-person', 'remote-box', 'remote'])
 quick_stats.loc['teams'] = teams.interaction_type.value_counts()
-quick_stats.loc['finishers'] = teams.loc[teams.finish_time.notna() & (teams.finish_time < teams.end_time)].interaction_type.value_counts()
+quick_stats.loc['finishers'] = teams[teams.finish_time.notna() & (teams.finish_time < teams.end_time)].interaction_type.value_counts()
 quick_stats.loc['action meta solves'] = solves.loc[solves.puzzle_id == 'drop-the', 'team_id'].map(teams.interaction_type).value_counts()
 quick_stats.loc['participants'] = teams.groupby(teams.interaction_type).member_count.sum()
 quick_stats.loc['hints asked'] = hints.groupby(hints.team_id.map(teams.interaction_type)).size()
@@ -157,8 +157,8 @@ puzzle_stats.tokens = solves.loc[solves.type == 'answer_token', 'puzzle_id'].val
 output.write('<!-- primary stats -->\n')
 output.write(puzzle_stats.reset_index().to_html(index=False))
 
-other_stats = guesses.loc[~guesses.is_correct].groupby(guesses.puzzle_id).guess.value_counts().reset_index(level=1)
-other_stats = other_stats.loc[~other_stats.index.duplicated(keep='first')]
+other_stats = guesses[~guesses.is_correct].groupby(guesses.puzzle_id).guess.value_counts().reset_index(level=1)
+other_stats = other_stats[~other_stats.index.duplicated(keep='first')]
 other_stats.rename(columns={'guess': 'top_incorrect', 'count': 'relative_frequency'}, inplace=True)
 other_stats.relative_frequency = other_stats.relative_frequency / puzzle_stats.solves * 100
 other_stats.sort_values(by='relative_frequency', ascending=False, inplace=True)
