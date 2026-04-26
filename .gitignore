@@ -1,11 +1,13 @@
 MITMH
 __pycache__
 
+*.csv
 *.ipynb
 *.json
-*.csv
 *.jpg
+*.mov
 *.png
+*.svg
 *solves.html
 
 Invoice*
