@@ -1,14 +1,14 @@
 MITMH
-BPH 2025/input
-BPH 2025/input-modified
 __pycache__
 
 *.ipynb
 *.json
 *.csv
+*.jpg
+*.png
+*solves.html
 
 Invoice*
 Receipt*
 
 .DS_Store
-BPH 2025/image.png
