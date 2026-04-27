@@ -1,0 +1,84 @@
+{
+  "advanced-logical-cooking-techniques": [
+    "cubist-linguistics",
+    "maritime-studies",
+    "psychoceramics"
+  ],
+  "analogical-semantics": [
+    "anthropology-of-computers",
+    "thermodynamic-zoology"
+  ],
+  "anthropology-of-computers": ["fifth-year-masters"],
+  "applied-criminology": ["fifth-year-masters"],
+  "applied-probability": ["applied-criminology", "bar-exam"],
+  "architecture-on-college-hill": ["applied-criminology", "bar-exam"],
+  "avionic-intersectionality": [
+    "anthropology-of-computers",
+    "theological-chemistry"
+  ],
+  "bar-exam": ["fifth-year-masters"],
+  "big-wheel": ["applied-criminology", "maritime-studies"],
+  "card-game-theory": ["psychoceramics", "theological-chemistry"],
+  "characters-in-flight": ["applied-criminology", "cubist-linguistics"],
+  "collaborative-chorale": ["anthropology-of-computers", "maritime-studies"],
+  "cubist-linguistics": ["fifth-year-masters"],
+  "culinary-chemistry-lab": ["psychoceramics", "underwater-basketweaving"],
+  "dirt": ["anthropology-of-computers", "theological-chemistry"],
+  "disguised-financial-crimes": ["applied-criminology", "cubist-linguistics"],
+  "editing-practice": ["geographical-textiles", "psychoceramics"],
+  "escapism-in-cinema": ["luck-practicum", "psychoceramics"],
+  "experimental-cardiac-measurement": [
+    "luck-practicum",
+    "thermodynamic-zoology"
+  ],
+  "fifth-year-masters": [],
+  "geographical-textiles": ["fifth-year-masters"],
+  "going-in-circles": ["applied-criminology", "underwater-basketweaving"],
+  "herculean-math": ["applied-criminology", "theological-chemistry"],
+  "how-to-get-your-heart-broken": [
+    "bar-exam",
+    "geographical-textiles",
+    "psychoceramics",
+    "thermodynamic-zoology"
+  ],
+  "itty-bitty-kitties": [
+    "anthropology-of-computers",
+    "underwater-basketweaving"
+  ],
+  "linear-algebra": ["anthropology-of-computers", "bar-exam"],
+  "linesman-training": ["psychoceramics", "thermodynamic-zoology"],
+  "luck-practicum": ["fifth-year-masters"],
+  "maritime-studies": ["fifth-year-masters"],
+  "mischievous-literature": ["cubist-linguistics", "psychoceramics"],
+  "multi-clef-composition": ["geographical-textiles", "theological-chemistry"],
+  "primary-investigation": [
+    "anthropology-of-computers",
+    "thermodynamic-zoology"
+  ],
+  "psychoceramics": ["fifth-year-masters"],
+  "rabbit-nundrum": ["luck-practicum", "psychoceramics"],
+  "scacchic-fabrication": ["geographical-textiles", "underwater-basketweaving"],
+  "schmear-campaigns": ["applied-criminology", "geographical-textiles"],
+  "serialized-storytelling": [
+    "applied-criminology",
+    "maritime-studies",
+    "underwater-basketweaving"
+  ],
+  "sunk-modern-naval-investigative-methodology": [
+    "geographical-textiles",
+    "maritime-studies"
+  ],
+  "theological-chemistry": ["fifth-year-masters"],
+  "thermodynamic-zoology": ["fifth-year-masters"],
+  "topics-in-guard-door-theory": ["bar-exam", "psychoceramics"],
+  "trap-streets": ["anthropology-of-computers", "cubist-linguistics"],
+  "ubpcosu-i": ["anthropology-of-computers", "cubist-linguistics"],
+  "ubpcosu-ii": ["luck-practicum", "thermodynamic-zoology"],
+  "underwater-basketweaving": ["fifth-year-masters"],
+  "voting-dynamics": ["luck-practicum", "psychoceramics"],
+  "year-of-the-honse": [
+    "anthropology-of-computers",
+    "geographical-textiles",
+    "thermodynamic-zoology"
+  ]
+}
