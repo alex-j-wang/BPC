@@ -6,28 +6,32 @@ import plotly.graph_objects as go
 
 colors = ['#023EFF', '#FF7C00', '#1AC938', '#E8000B', '#8B2BE2', '#9F4800', '#F14CC1', '#A3A3A3', '#FFC400', '#00D7FF']
 
-data_folder = '2025-04-25'
+data_folder = '2026-04-26'
 
-in_person_start = pd.Timestamp('2025-04-12T17:30:00.000Z').tz_convert('US/Eastern')
-in_person_end = pd.Timestamp('2025-04-13T23:00:00.000Z').tz_convert('US/Eastern')
-remote_start = pd.Timestamp('2025-04-19T16:00:00.000Z').tz_convert('US/Eastern')
-remote_end = pd.Timestamp('2025-04-25T16:00:00.000Z').tz_convert('US/Eastern')
+in_person_start = pd.Timestamp('2026-04-11T17:00:00.000Z').tz_convert('US/Eastern')
+in_person_end = pd.Timestamp('2026-04-12T23:00:00.000Z').tz_convert('US/Eastern')
+remote_start = pd.Timestamp('2026-04-18T16:00:00.000Z').tz_convert('US/Eastern')
+remote_end = pd.Timestamp('2026-04-24T16:30:00.000Z').tz_convert('US/Eastern')
 
-metas = ['drop-the', 'aha-erlebnis', 'balloon-animals', 'boring-plot', 'six-degrees', 'cutting-room-floor']
+metas = [
+    'anthropology-of-computers', 'psychoceramics', 'applied-criminology', 'theological-chemistry',
+    'underwater-basketweaving', 'geographical-textiles', 'thermodynamic-zoology', 'maritime-studies',
+    'luck-practicum', 'bar-exam', 'cubist-linguistics', 'fifth-year-masters'
+]
 
-solves = pd.read_csv(f'{data_folder}/bph_site_solve.csv', index_col='puzzle_id')
-teams = pd.read_csv(f'{data_folder}/bph_site_team.csv', index_col='id')
+solves = pd.read_csv(f'{data_folder}/hunt_site_solve.csv', index_col='puzzle_id')
+teams = pd.read_csv(f'{data_folder}/hunt_site_team.csv', index_col='id')
 
 solves.solve_time = pd.to_datetime(solves.solve_time, format='ISO8601').dt.tz_convert('US/Eastern')
 teams.create_time = pd.to_datetime(teams.create_time, format='ISO8601').dt.tz_convert('US/Eastern')
 
 solves = solves.loc[solves.team_id.map(teams.role) == 'user']
 teams = teams.loc[teams.role == 'user']
-teams.loc[(teams.interaction_type == 'remote') & teams.has_box, 'interaction_type'] = 'remote-box'
 
-for interaction_type in ['in-person', 'remote-box', 'remote']:
+for interaction_type in ['in-person', 'remote']:
     start = in_person_start if interaction_type == 'in-person' else remote_start
     end = in_person_end if interaction_type == 'in-person' else remote_end
+    finish_threshold = len(metas) if interaction_type == 'remote' else (len(metas) - 1)
 
     fig = go.Figure()
     fig.update_layout(
@@ -41,7 +45,7 @@ for interaction_type in ['in-person', 'remote-box', 'remote']:
     )
 
     idx = 0
-    filtered = solves[solves.team_id.map(teams.interaction_type) == interaction_type]
+    filtered = solves[(solves.team_id.map(teams.interaction_type) == interaction_type) & (solves.solve_time <= end)]
 
     for username, team_solves in filtered.sort_values('solve_time').groupby('team_id'):
         meta_count = 0;
@@ -58,7 +62,7 @@ for interaction_type in ['in-person', 'remote-box', 'remote']:
         for puzzle in puzzles[1:]:
             if puzzle in metas:
                 meta_count += 1
-            if puzzle in metas and meta_count == len(metas):
+            if puzzle in metas and meta_count == finish_threshold:
                 marker_symbols.append('star')
                 marker_colors.append('gold' if team_solves.loc[puzzle, 'type'] == 'guess' else 'white')
                 stroke_colors.append('gold')
@@ -70,7 +74,7 @@ for interaction_type in ['in-person', 'remote-box', 'remote']:
                 marker_sizes.append(5)
             
         # Gate to hunt completions
-        if meta_count != len(metas):
+        if meta_count < finish_threshold:
             continue
 
         fig.add_trace(
