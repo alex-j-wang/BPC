@@ -94,7 +94,7 @@ finishers = teams.finish_time.notna() & (teams.finish_time < teams.end_time)
 output = open('index.html', 'w')
 
 # QUICK STATS
-output.write('<!-- QUICK STATS -->\n')
+print('<!-- QUICK STATS -->', file=output)
 
 quick_stats = pd.DataFrame(columns=['in-person', 'remote'])
 quick_stats.loc['teams'] = teams.interaction_type.value_counts()
@@ -106,35 +106,35 @@ quick_stats.loc['guesses'] = guesses.groupby(guesses.team_id.map(teams.interacti
 quick_stats.loc['solves'] = solves.groupby(solves.team_id.map(teams.interaction_type)).size()
 
 quick_stats['total'] = quick_stats.sum(axis=1)
-output.write(quick_stats.to_html())
+print(quick_stats.to_html(), file=output)
 
 # TEAM STATS
-output.write('<!-- TEAM STATS -->\n')
+print('<!-- TEAM STATS -->', file=output)
 
-output.write('<!-- fewest guesses (finishers) -->\n')
-output.write(
+print('<!-- fewest guesses (finishers) -->', file=output)
+print(
     teams.loc[finishers, ['display_name', 'guess_count']]
-    .sort_values(by='guess_count').head(10).to_html(index=False))
+    .sort_values(by='guess_count').head(10).to_html(index=False), file=output)
 
-output.write('<!-- most guesses (finishers) -->\n')
-output.write(
+print('<!-- most guesses (finishers) -->', file=output)
+print(
     teams.loc[finishers, ['display_name', 'guess_count']]
-    .sort_values(by='guess_count', ascending=False).head(10).to_html(index=False))
+    .sort_values(by='guess_count', ascending=False).head(10).to_html(index=False), file=output)
 
-output.write('<!-- fewest hints (finishers) -->\n')
-output.write(
+print('<!-- fewest hints (finishers) -->', file=output)
+print(
     teams.loc[finishers, ['display_name', 'hint_count']]
-    .sort_values(by='hint_count').head(40).to_html(index=False))
+    .sort_values(by='hint_count').head(40).to_html(index=False), file=output)
 
-output.write('<!-- most hints (finishers) -->\n')
-output.write(
+print('<!-- most hints (finishers) -->', file=output)
+print(
     teams.loc[finishers, ['display_name', 'hint_count']]
-    .sort_values(by='hint_count', ascending=False).head(10).to_html(index=False))
+    .sort_values(by='hint_count', ascending=False).head(10).to_html(index=False), file=output)
 
-output.write('<!-- most hints + replies (finishers) -->\n')
-output.write(
+print('<!-- most hints + replies (finishers) -->', file=output)
+print(
     teams.loc[finishers, ['display_name', 'total_hint_count']]
-    .sort_values(by='total_hint_count', ascending=False).head(10).to_html(index=False))
+    .sort_values(by='total_hint_count', ascending=False).head(10).to_html(index=False), file=output)
 
 # PUZZLE STATS
 puzzle_stats = pd.DataFrame(index=puzzles.id, columns=['guesses', 'solves', 'backsolves', 'hints', 'hints + replies', 'tokens'])
@@ -142,7 +142,7 @@ puzzle_stats.guesses = guesses.puzzle_id.value_counts().reindex(puzzle_stats.ind
 puzzle_stats.solves = solves.puzzle_id.value_counts().reindex(puzzle_stats.index, fill_value=0)
 
 # Backsolves
-output.write('<!-- PUZZLE STATS -->\n')
+print('<!-- PUZZLE STATS -->', file=output)
 
 solves['meta_ids'] = solves['puzzle_id'].map(meta_map)
 solves_exploded = solves.explode('meta_ids')
@@ -159,8 +159,8 @@ puzzle_stats.hints = hints.puzzle_id.value_counts().reindex(puzzle_stats.index, 
 puzzle_stats['hints + replies'] = puzzle_stats.hints + replies.puzzle_id.value_counts().reindex(puzzles.id, fill_value=0)
 puzzle_stats.tokens = solves.loc[solves.type == 'answer_token', 'puzzle_id'].value_counts().reindex(puzzle_stats.index, fill_value=0)
 
-output.write('<!-- primary stats -->\n')
-output.write(puzzle_stats.reset_index().to_html(index=False))
+print('<!-- primary stats -->', file=output)
+print(puzzle_stats.reset_index().to_html(index=False), file=output)
 
 other_stats = guesses[~guesses.is_correct].groupby(guesses.puzzle_id).guess.value_counts().reset_index(level=1)
 other_stats = other_stats[~other_stats.index.duplicated(keep='first')]
@@ -169,11 +169,11 @@ other_stats.relative_frequency = other_stats.relative_frequency / puzzle_stats.s
 other_stats.sort_values(by='relative_frequency', ascending=False, inplace=True)
 other_stats.relative_frequency = other_stats.relative_frequency.round(1)
 
-output.write('<!-- secondary stats -->\n')
-output.write(other_stats.reset_index().to_html(index=False))
+print('<!-- secondary stats -->', file=output)
+print(other_stats.reset_index().to_html(index=False), file=output)
 
 # MISCELLANEOUS STATS
-output.write('<!-- MISCELLANEOUS STATS -->\n')
+print('<!-- MISCELLANEOUS STATS -->', file=output)
 
 first_solves = (
     solves
@@ -191,18 +191,18 @@ first_solves['solve_duration'] = (first_solves.solve_time - first_solves.interac
     f'{int(td.total_seconds() // 60)}m {td.total_seconds() % 60:.3f}s'
 ))
 
-output.write('<!-- first solves -->\n')
-output.write(first_solves[['interaction_type', 'puzzle_id', 'display_name', 'solve_duration']].to_html(index=False))
+print('<!-- first solves -->', file=output)
+print(first_solves[['interaction_type', 'puzzle_id', 'display_name', 'solve_duration']].to_html(index=False), file=output)
 
-output.write('<!-- longest guesses -->\n')
-output.write(guesses.sort_values(by='length', ascending=False)[['guess', 'length']].head(10).to_html(index=False))
-output.write('<!-- one-character guesses -->\n')
-output.write(guesses.loc[guesses.length == 1, 'guess'].value_counts().to_frame().reset_index().to_html(index=False))
+print('<!-- longest guesses -->', file=output)
+print(guesses.sort_values(by='length', ascending=False)[['guess', 'length']].head(10).to_html(index=False), file=output)
+print('<!-- one-character guesses -->', file=output)
+print(guesses.loc[guesses.length == 1, 'guess'].value_counts().to_frame().reset_index().to_html(index=False), file=output)
 
-output.write('<!-- longest hints -->\n')
-output.write(hints.sort_values(by='length', ascending=False)[['request', 'length']].head(1).to_html(index=False))
-output.write('<!-- shortest hints -->\n')
-output.write(hints.sort_values(by='length')[['request', 'length']].head(10).to_html(index=False))
+print('<!-- longest hints -->', file=output)
+print(hints.sort_values(by='length', ascending=False)[['request', 'length']].head(1).to_html(index=False), file=output)
+print('<!-- shortest hints -->', file=output)
+print(hints.sort_values(by='length')[['request', 'length']].head(10).to_html(index=False), file=output)
 
 # EVENT STATS
 event_stats = pd.DataFrame(columns=['submitted', 'used'])
@@ -210,8 +210,8 @@ for event in answer_tokens.event_id.unique():
     event_stats.loc[event, 'submitted'] = (answer_tokens.event_id == event).sum()
     event_stats.loc[event, 'used'] = ((answer_tokens.event_id == event) & answer_tokens.puzzle_id).sum()
 
-output.write('<!-- EVENT STATS -->\n')
-output.write(event_stats.to_html())
+print('<!-- EVENT STATS -->', file=output)
+print(event_stats.to_html(), file=output)
 
 output.close()
 
